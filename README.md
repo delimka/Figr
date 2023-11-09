@@ -33,16 +33,6 @@ or check the terminal with suitable link.
 ## Link
 https://figr-delima.web.app/
 
-## Contributing
-
-We welcome contributions from the community! If you'd like to contribute to this project, please follow these steps:
-
-1. Fork the repository
-2. Create a new branch for your feature or bug fix: `git checkout -b feature-name`
-3. Make your changes and commit them: `git commit -m "Description of changes"`
-4. Push your changes to your fork: `git push origin feature-name`
-5. Create a pull request on the main repository
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
@@ -57,7 +47,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-For any inquiries or feedback, please contact us at [delima021@gmail.com](mailto:delima021@gmail.com).
+For any inquiries or feedback, please contact us at [delimka](mailto:delima021@gmail.com).
 
 -----------------------------------------------------
 
