@@ -1,0 +1,35 @@
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin flexStart($direction) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: $direction;
+}
+
+
+
+$white: #ffffff;
+$orange: #ff7f00;
+$orange-light: #f4983c;
+$purple-light: #00215B;
+$black: #16213e;
+
+@mixin customBg($color, $opacity) {
+    background-color: rgba($color, $opacity);
+}
+
+@mixin custom-grid-autofit($min-column-size) {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(($min-column-size), 1fr)
+    );
+  
+}
+

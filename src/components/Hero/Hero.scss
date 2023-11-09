@@ -1,0 +1,93 @@
+@import "./../../helpers/helpers.scss";
+
+.hero {
+  @include flexStart(column);
+  text-align: start;
+  background: linear-gradient(to right, rgba($black, 0.6), rgba($black, 0.1)),
+    url("./../../assets/hero-bg.png") center top;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+.hero-heading-1 {
+  font-size: 80px;
+}
+
+.hero-p {
+  font-size: 20px;
+}
+.item {
+  padding: 15px;
+  padding-left: 8%;
+  color: $white;
+}
+
+.item-1 {
+  width: 100%;
+  padding-top: 90px;
+  font-weight: bold;
+}
+
+.item-2 {
+  width: 50%;
+  font-size: 20px;
+}
+
+@media (max-width: 1600.98px) {
+  .hero-heading-1 {
+    font-size: 70px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .hero-heading-1 {
+    font-size: 55px;
+  }
+  .hero-p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero-heading-1 {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-heading-1 {
+    font-size: 35px;
+  }
+
+  .item {
+    padding-left: 4%;
+  }
+  .item-2 {
+    width: 100%;
+  }
+}
+@media (max-width: 575.98px) {
+  .hero-heading-1 {
+    font-size: 30px;
+  }
+}
+
+
+@media (min-height: 1200.98px){
+  .hero{ height:100vh;}
+}
+
+@media (max-width: 991.98px) and (max-height: 1200.97px) and (min-height:800px ){
+  .hero{ height:90vh;}
+}
+
+
+@media  (min-width:1980px) {
+  .hero-heading-1{
+    font-size: 90px;
+  }
+  .hero-p{
+    font-size: 25px;
+  }
+
+
+}

@@ -1,0 +1,88 @@
+@import "./../../helpers/helpers.scss";
+
+.quote-request-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: min(100% - 20%);
+  margin-inline: auto;
+  margin-top: 250px;
+
+  form {
+    width: min(100% - 60%);
+
+    h2 {
+      text-wrap: balance;
+      color: $purple-light;
+      font-weight: bold;
+      -webkit-text-stroke: 1px #000000;
+    }
+
+    h3 {
+      color: $orange;
+      font-weight: 500;
+      font-size: 14px;
+    }
+    div {
+      padding-bottom: 15px;
+    }
+  }
+}
+
+.quote-form-info {
+  height: auto;
+  width: min(100% - 50%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  user-select: none;
+  .icon-container {
+    margin-right: 30px;
+    img {
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  li {
+    padding-right: 15%;
+  }
+}
+
+@media (max-width: 555px) {
+  .quote-request-container {
+    margin-top: 100px;
+
+    form {
+      div {
+        padding-bottom: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .quote-request-container {
+    justify-content: stretch;
+
+    form {
+      width: 100%;
+      div {
+        padding-bottom: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .quote-request-container {
+    justify-content: space-evenly;
+    form {
+      width: 80%;
+    }
+    .quote-form-info {
+      display: none;
+    }
+  }
+}

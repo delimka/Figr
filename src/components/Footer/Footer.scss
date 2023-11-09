@@ -1,0 +1,69 @@
+@import "./../../helpers/helpers.scss";
+
+.footer {
+  background: linear-gradient(
+    to right,
+    $orange 35%,
+    $orange 35%,
+    $purple-light 35%,
+    $purple-light 65%,
+    $purple-light 65%
+  );
+  margin-top: 150px;
+  color: white !important;
+
+  a {
+    font-weight: 300;
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+      color: $orange !important;
+    }
+  }
+  .footer-p {
+    margin-right: 40px;
+    font-weight: 300;
+  }
+}
+
+.footer-copyright {
+  font-weight: 300;
+
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    color: $orange;
+  }
+  padding-left: 30px;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+@media (max-width: 991px) {
+  .footer {
+    .footer-p {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 780px) {
+  .footer {
+    background: linear-gradient(
+      to right,
+      $orange 7%,
+      $orange 7%,
+      $purple-light 7%,
+      $purple-light 93%,
+      $purple-light 93%
+    );
+    .footer-p {
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+  }
+}
