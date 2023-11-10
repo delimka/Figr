@@ -27,6 +27,12 @@ const ModalImage: React.FC<ModalImageProps> = ({
     afterChange: (current : number) => setSlideIndex(current),
   };
 
+  console.log("Show:", show);
+  console.log("Images:", images);
+  console.log("Alt Text:", altText);
+  console.log("Initial Slide:", initialSlide);
+  console.log("Slide Index:", slideIndex);
+
   return ( 
     <Modal show={show} onHide={handleClose} className="modal-lg" centered>
       <Modal.Body>

@@ -47,7 +47,7 @@ function Projects() {
         >
           <div className="project-photo project-photo-2 ">
             <div className="overlay">
-              <h1>Project 2</h1>
+              <h3>Project 2</h3>
               <p>Project Description</p>
               <OrangeBtn>Learn more&nbsp;&nbsp;→</OrangeBtn>
             </div>

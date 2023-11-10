@@ -4,6 +4,7 @@ import AnimatedImageContainer from "../../helpers/hooks/AnimatedImageContainer";
 import ResizeHandler from "../../helpers/hooks/ResizeHandler";
 import icon4 from "./../../assets/contacts-images/phone-icon.jpg";
 import icon5 from "./../../assets/contacts-images/email-icon.jpg";
+import { Element } from "react-scroll";
 
 interface ContactPhone {
   title: "Phone";
@@ -41,21 +42,21 @@ const Contacts: React.FC = () => {
     },
   ];
 
-  // Render function with correct type phone/email
+  // Render function with the correct type phone/email
   const renderContactInfo = (contact: ContactItem) => {
     switch (contact.title) {
       case "Phone":
         return (
           <>
-            <a href={`tel:${contact.fphone}`}>{contact.fphone}</a>
-            <a href={`tel:${contact.sphone}`}>{contact.sphone}</a>
+            <a href={`tel:${contact.fphone}`} aria-label={`Call ${contact.fphone}`}>{contact.fphone}</a>
+            <a href={`tel:${contact.sphone}`} aria-label={`Call ${contact.sphone}`}>{contact.sphone}</a>
           </>
         );
       case "E-mail":
         return (
           <>
-            <a href={`mailto:${contact.femail}`}>{contact.femail}</a>
-            <a href={`mailto:${contact.semail}`}>{contact.semail}</a>
+            <a href={`mailto:${contact.femail}`} aria-label={`Email ${contact.femail}`}>{contact.femail}</a>
+            <a href={`mailto:${contact.semail}`} aria-label={`Email ${contact.semail}`}>{contact.semail}</a>
           </>
         );
       default:
@@ -63,7 +64,6 @@ const Contacts: React.FC = () => {
     }
   };
 
-  
   // Motion
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -72,9 +72,8 @@ const Contacts: React.FC = () => {
   const animateY = windowWidth <= 1240;
 
   return (
-    <section className="contact-container">
+    <Element name="contacts" className="contact-container">
       <div className="map-container" onClick={openGoogleMaps}></div>
-
       <div className="details-container">
         <ResizeHandler setWindowWidth={setWindowWidth} />
         <AnimatedImageContainer
@@ -98,19 +97,20 @@ const Contacts: React.FC = () => {
           animateX={animateX}
           animateY={animateY}
         >
-        {mainContacts.map((data, index) => (
-          <li key={index} className="contact-items">
-            <div className="contact-icon-container">
-              <img src={data.icon} alt={data.title} className="icons-img" />
-            </div>
-            <div className="activity-info-data">
-              <label className="sub-heading-5">{data.title}</label>
-              {renderContactInfo(data)}
-            </div>
-          </li>
-        ))}</AnimatedImageContainer>
+          {mainContacts.map((data, index) => (
+            <li key={index} className="contact-items">
+              <div className="contact-icon-container">
+                <img src={data.icon} alt={data.title} className="icons-img" />
+              </div>
+              <div className="activity-info-data">
+                <label className="sub-heading-5">{data.title}</label>
+                {renderContactInfo(data)}
+              </div>
+            </li>
+          ))}
+        </AnimatedImageContainer>
       </div>
-    </section>
+    </Element>
   );
 };
 

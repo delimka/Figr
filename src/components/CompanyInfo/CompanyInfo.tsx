@@ -7,7 +7,6 @@ import icon2 from "./../../assets/info-icons/Shape.svg";
 import icon3 from "./../../assets/info-icons/Ruler.svg";
 
 const CompanyInfo = () => {
-  // Calculate the number of years in business
   const startYear = 2006;
   const currentYear = new Date().getFullYear();
   const yearsInBusiness = currentYear - startYear + "+";
@@ -74,7 +73,7 @@ const CompanyInfo = () => {
       >
         <div className="main-activity-box">
           <h2 className="main-heading-2">
-            We Construct and Manage Places and Infrastructures{" "}
+          Crafting Metal Solutions for Enduring Infrastructures
           </h2>
           <ul>
             {mainActivities.map((activity, index) => (

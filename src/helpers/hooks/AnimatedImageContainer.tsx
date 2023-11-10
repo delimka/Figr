@@ -21,12 +21,13 @@ function AnimatedImageContainer({ threshold, children, yValue, xValue, className
     threshold: threshold || 0.2,
   });
 
-  console.log(inView);
+  console.log("InView:", inView);
+  console.log("Y Value:", yValue);
+  console.log("X Value:", xValue);
 
   return (
     <motion.div 
       ref={ref}
-      //depending on the screen size, we create motion into right direction
       initial={{ opacity: 0, x: animateX ? initialX || 0 : 0, y: animateY ? initialY || 0 : 0 }}
       animate={inView ? { opacity: 1, y: yValue || 0, x: xValue || 0 } : {}} 
       transition={{ duration: 1 }}  

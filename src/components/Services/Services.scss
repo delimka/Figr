@@ -6,6 +6,8 @@
   height: 80vh;
   padding: 2% 0;
   margin-top: 200px;
+  user-select: none;
+
 }
 
 // Typography
@@ -73,7 +75,7 @@ h2{
 
     p {
       line-height: 2;
-      font-weight: 100;
+      font-weight: 400;
       font-size: 16px;
     }
     h2 {

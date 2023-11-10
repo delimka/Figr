@@ -43,6 +43,10 @@
   text-decoration: underline;
 }
 
+.me-4:last-child {
+  margin-right: 0!important;
+}
+
 @media (max-width: 991px) {
   .footer {
     .footer-p {

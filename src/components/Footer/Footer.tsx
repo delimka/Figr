@@ -1,4 +1,4 @@
-import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import { MDBFooter, MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import { BiLogoGmail} from "react-icons/bi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -19,17 +19,15 @@ export default function App() {
 
         <div>
           <a href='https://www.facebook.com/' className='me-4 text-reset'>
-            <MDBIcon fab icon="facebook-f" />
-          </a>
-          <a href='' className='me-4 text-reset'>
-          <FontAwesomeIcon icon={faInstagram} />
-          </a>
-          <a href='' className='me-4 text-reset'>
-          <BiLogoGmail/>      
-            </a>
-          <a href='' className='me-4 text-reset'>
           <FontAwesomeIcon icon={faFacebook} />
           </a>
+          <a href='https://www.instagram.com/' className='me-4 text-reset'>
+          <FontAwesomeIcon icon={faInstagram} />
+          </a>
+          <a href='https://wwww.gmail.com/' className='me-4 text-reset'>
+          <BiLogoGmail/>      
+            </a>
+          
         </div>
       </section>
 
