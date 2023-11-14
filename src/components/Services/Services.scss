@@ -7,14 +7,9 @@
   padding: 2% 0;
   margin-top: 200px;
   user-select: none;
-
 }
 
 // Typography
-h2{
-  margin-bottom: 20px;
-
-}
 
 .image-container {
   position: relative;
@@ -27,7 +22,7 @@ h2{
     background-color: transparent;
   }
   &.big {
-    flex: 2;
+    flex: 1;
 
     &::before {
       content: "";
@@ -67,16 +62,17 @@ h2{
     padding-top: 15%;
 
     h2,
-    p {
+    .service-p {
       margin: 0;
       padding: 3%;
       text-align: center;
     }
 
-    p {
+    .service-p {
       line-height: 2;
       font-weight: 400;
       font-size: 16px;
+      hyphens: auto;
     }
     h2 {
       margin-bottom: 20px;
@@ -147,13 +143,16 @@ h2{
   }
 }
 
-
-
 @media (max-width: 993.98px) {
   .services-container {
     flex-direction: column;
     height: 100vh;
-
+    .service-p {
+      width: 70%;
+    }
+    h2 {
+      width: 30%;
+    }
     .image-container {
       &.big {
         flex: 1;
@@ -164,12 +163,11 @@ h2{
         align-items: flex-start;
 
         h2,
-        p {
+        .service-p {
           text-align: start;
         }
 
         &.prpl {
-
           &:hover {
             h2 {
               border-color: $orange;
@@ -177,7 +175,6 @@ h2{
           }
         }
         &.orng {
-        
           &:hover {
             h2 {
               border-color: $purple-light;
@@ -189,7 +186,6 @@ h2{
   }
 }
 
-
 @media (max-width: 575.98px) {
   .image-container {
     &.big {
@@ -197,19 +193,21 @@ h2{
     }
 
     .overlay-content {
-    
       .services-button button {
         width: 35px;
         height: 35px;
       }
     }
+    .service-p {
+      width: 60%;
+    }
+    h2 {
+      width: 40%;
+    }
   }
 }
 
-
 //TYPOGRAPHY
-
-
 
 @media (max-width: 767.98px) {
   h2 {
@@ -217,7 +215,7 @@ h2{
   }
   .image-container {
     .overlay-content {
-      p {
+      .service-p {
         font-size: 13px;
       }
       h2 {
@@ -230,7 +228,7 @@ h2{
 @media (min-width: 1980.98px) {
   .image-container {
     .overlay-content {
-      p {
+      .service-p {
         font-size: 20px;
         font-weight: 300;
       }

@@ -8,7 +8,6 @@
   background: linear-gradient(to top, rgba($orange, 0.2), rgba($white, 0.1)),
     linear-gradient(to left, rgba($orange, 0.2), rgba($white, 0.1));
   padding: 0 3%;
-  border-radius: 20px;
 }
 
 .left-container,
@@ -34,7 +33,8 @@
 
 .about-p {
   margin: 20px 0;
-  text-align: justify;
+  hyphens: auto;
+  text-overflow: ellipsis;
 }
 
 /* Typography */
@@ -209,6 +209,10 @@
     font-size: 16px;
     text-align: justify;
   }
+  .carousel-inner img {
+    height: 35vh;
+    
+}
 }
 
 @media (max-width: 415.98px) {

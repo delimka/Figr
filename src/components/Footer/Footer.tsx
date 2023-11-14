@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next'; 
 import { MDBFooter, MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
 import { BiLogoGmail} from "react-icons/bi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,22 +10,23 @@ import { faEnvelope, faPhone, faPrint, faHome } from "@fortawesome/free-solid-sv
 import './Footer.scss';
 
 export default function App() {
-    
+  const { t } = useTranslation();
+
   return (
     <MDBFooter bgColor='light'  className='footer text-center text-lg-start text-muted'>
       <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
         <div className='me-5 d-none d-lg-block'>
-          <span>Get connected with us on social networks:</span>
+          <span>{t('footer.socialNetworksText')}</span>
         </div>
 
         <div>
-          <a href='https://www.facebook.com/' className='me-4 text-reset'>
+          <a href='https://www.facebook.com/' className='me-4 text-reset'  aria-label="Facebook">
           <FontAwesomeIcon icon={faFacebook} />
           </a>
-          <a href='https://www.instagram.com/' className='me-4 text-reset'>
+          <a href='https://www.instagram.com/' className='me-4 text-reset'  aria-label="Instagram">
           <FontAwesomeIcon icon={faInstagram} />
           </a>
-          <a href='https://wwww.gmail.com/' className='me-4 text-reset'>
+          <a href='https://wwww.gmail.com/' className='me-4 text-reset' aria-label="Gmail">
           <BiLogoGmail/>      
             </a>
           
@@ -39,30 +41,30 @@ export default function App() {
                 FIGR
               </h6>
               <p className='footer-p'>
-              For the creation of high-quality metal structures, combining reliability and professionalism with modern technology, turn to us.
+              {t('footer.aboutFigr.description')}
               </p>
             </MDBCol>
 
             <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4 text-underline'>Products</h6>
+              <h6 className='text-uppercase fw-bold mb-4 text-underline'>{t('footer.products.heading')}</h6>
               <p>
                 <a href='#!' className='text-reset'>
-                Console Cranes
+                {t('footer.products.items.0.label')}
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                Overhead Cranes
+                {t('footer.products.items.1.label')}
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                Gantry / Semi-Gantry Cranes
+                {t('footer.products.items.2.label')}
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                Mechanical Engineering
+                {t('footer.products.items.3.label')}
                 </a>
               </p>
             </MDBCol>
@@ -70,7 +72,7 @@ export default function App() {
         
 
             <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
-        <h6 className='text-uppercase fw-bold mb-4 text-underline'>Contact</h6>
+        <h6 className='text-uppercase fw-bold mb-4 text-underline'>{t('footer.contact')}</h6>
         <p>
           <FontAwesomeIcon icon={faHome} className="me-2" />
           Monumendi, Laagri, 76401
@@ -93,8 +95,8 @@ export default function App() {
       </section>
 
       <div className='text-center p-4' style={{ backgroundColor: 'rgba($orange' }}>
-        <a href="https://www.github.com/delimka" className="footer-copyright"target="_blank" rel="noopener noreferrer">
-          © {new Date().getFullYear()} Figr. All rights reserved. Created by delima.
+        <a href="/home" className="footer-copyright"target="_blank" rel="noopener noreferrer">
+          © {new Date().getFullYear()} Figr. All rights reserved.
         </a>
       </div>
     </MDBFooter>

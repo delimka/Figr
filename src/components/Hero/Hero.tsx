@@ -1,9 +1,12 @@
 import OrangeBtn from "./../OrangeBtn/OrangeBtn";
 import { Link as ScrollLink } from "react-scroll";
 import { Element } from "react-scroll";
+import { useTranslation } from 'react-i18next';
 import "./Hero.scss";
 
 const Hero = () => {
+  const { t } = useTranslation();
+
   return (
     <Element name="hero">
       <div className="hero">
@@ -16,10 +19,7 @@ const Hero = () => {
 
         <div className="item item-2">
           <p className="hero-p">
-            From precise assembly to seamless installation, meticulous
-            maintenance to thorough repairs, we &apos;ve got your crane needs covered.
-            Our expertise extends to specialized surface coatings for added
-            durability.
+          {t('hero.description')}
           </p>
         </div>
      
@@ -32,7 +32,7 @@ const Hero = () => {
             offset={-70}
             duration={300}
           >
-          <OrangeBtn>Learn more&nbsp;&nbsp;&nbsp;→</OrangeBtn>
+          <OrangeBtn>{t('hero.learnMore')}&nbsp;&nbsp;&nbsp;→</OrangeBtn>
           </ScrollLink>
         </div>
       </div>

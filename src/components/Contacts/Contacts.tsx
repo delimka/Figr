@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useTranslation } from 'react-i18next'; 
 import "./Contacts.scss";
 import AnimatedImageContainer from "../../helpers/hooks/AnimatedImageContainer";
 import ResizeHandler from "../../helpers/hooks/ResizeHandler";
@@ -22,22 +23,25 @@ interface ContactEmail {
 
 type ContactItem = ContactPhone | ContactEmail;
 
+
 const openGoogleMaps = () => {
   window.open("https://maps.app.goo.gl/GnotMTQUausaTFKR9");
 };
 
 const Contacts: React.FC = () => {
+  const { t } = useTranslation();
+
   const mainContacts: ContactItem[] = [
     {
       title: "Phone",
-      fphone: "+3729492923",
+      fphone: "+3725266828",
       sphone: "+3725939292",
       icon: icon4,
     },
     {
       title: "E-mail",
       femail: "first.email@example.com",
-      semail: "second.email@example.com",
+      semail: "pavel.pissarenko@figr.ee",
       icon: icon5,
     },
   ];
@@ -85,7 +89,7 @@ const Contacts: React.FC = () => {
           animateY={animateY}
         >
           <div className="adress-container">
-            <h5>ADDRESS:</h5>
+            <h5>{t('contacts.address')}</h5>
             <h1>Monumendi, Laagri, 76401 Harju maakond</h1>
           </div>
         </AnimatedImageContainer>
@@ -96,18 +100,18 @@ const Contacts: React.FC = () => {
           className="right-contact-container"
           animateX={animateX}
           animateY={animateY}
-        >
+        > <ul>
           {mainContacts.map((data, index) => (
             <li key={index} className="contact-items">
               <div className="contact-icon-container">
-                <img src={data.icon} alt={data.title} className="icons-img" />
+                <img src={data.icon} alt={data.title} className="icons-img"  loading="lazy"/>
               </div>
               <div className="activity-info-data">
                 <label className="sub-heading-5">{data.title}</label>
                 {renderContactInfo(data)}
               </div>
             </li>
-          ))}
+          ))}</ul>
         </AnimatedImageContainer>
       </div>
     </Element>

@@ -1,0 +1,6 @@
+{
+    "files": [
+      "i18n.ts"
+    ],
+    "extends": "./tsconfig.json" 
+  }

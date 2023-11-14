@@ -1,0 +1,144 @@
+{
+  "navBar": {
+    "home": "Home",
+    "services": "Services",
+    "production": "Production",
+    "installation": "Installation",
+    "maintenance": "Maintenance",
+    "metalWork": "Metal Work",
+    "products": "Products",
+    "consoleCranes": "Console Cranes",
+    "gantryCranes": "Gantry Cranes",
+    "overheadCranes": "Overhead Cranes",
+    "mechanicalEngineering": "Mechanical Engineering",
+    "projects": "Projects",
+    "contacts": "Contacts"
+  },
+  "hero": {
+    "description": "From precise assembly to seamless installation, meticulous maintenance to thorough repairs, we 've got your crane needs covered. Our expertise extends to specialized surface coatings for added durability.",
+    "learnMore": "Learn more"
+  },
+  "companyInfo": {
+    "completedProjects": "Completed projects",
+    "yearsInBusiness": "Years in Business",
+    "activities": [
+      {
+        "title": "Construction and Installation",
+        "description": "Expert construction and installation of robust cranes for demanding environments.",
+        "icon": "icon1"
+      },
+      {
+        "title": "Crane Maintenance and Repair",
+        "description": "Comprehensive services for crane upkeep, ensuring reliability and longevity.",
+        "icon": "icon2"
+      },
+      {
+        "title": "Surface Coating and Refurbishment",
+        "description": "High-quality surface coating and refurbishment for crane preservation.",
+        "icon": "icon3"
+      }
+    ],
+    "mainHeading": "Crafting Metal Solutions for Enduring Infrastructures"
+  },
+  "aboutUs": {
+    "aboutHeading": "ABOUT US",
+    "subHeading": "With our knowledge we guarantee success",
+    "description": "Bringing over 17 years of expertise to the crane and metal construction industries, our company specializes in crafting, installing, and maintaining robust cranes, as well as other metal structures. With a track record of over 1200 completed projects, we are dedicated to providing top-quality solutions. Our comprehensive services include construction, installation, maintenance, repair, and surface coating, ensuring the longevity and reliability of your equipment. Trust us to deliver excellence in every aspect of crane care."
+  },
+  "services": {
+    "maintenance": {
+      "heading": "Maintenance",
+      "description": "With a focus on quality, we provide expert repairs and professional surface coating for cranes, enhancing their durability and extending their lifespan."
+    },
+    "production": {
+      "heading": "Production",
+      "description": "From comprehensive maintenance to meticulous assembly, our services cover every aspect of crane production, guaranteeing top-notch performance and safety."
+    },
+    "installation": {
+      "heading": "Installation",
+      "description": "Our expert team specializes in precise crane installation, ensuring seamless integration and optimal functionality for your operations."
+    },
+    "buttonAriaLabel": "Button for next an additional information"
+  },
+  "project": {
+    "headingTop": "Our Works",
+    "subHeading": "Our special Projects",
+    "heading": "Project",
+    "description": "Project Description",
+    "buttonText": "Check more"
+  },
+  "contacts":{
+    "phone": "Phone",
+    "email": "E-Mail",
+    "address": "Address"
+  },
+
+  "quoteForm": {
+    "heading": {
+      "appointment": "Appointment",
+      "requestQuote": "Request a Quote"
+    },
+    "formFields": {
+      "fullName": "Full Name",
+      "fullNameWarning": "Please enter your full name.",
+      "phone": "Phone",
+      "phoneWarning": "Please enter your phone number.",
+      "email": "Email address",
+      "emailWarning": "Please enter valid e-mail.",
+      "selectService": "Select Service",
+      "serviceOptions": {
+        "choose": "Choose...",
+        "service1": "Service 1",
+        "service2": "Service 2",
+        "service3": "Service 3",
+        "warning": "Please select a service"
+      },
+      "message": "Message",
+      "submitBtn": "Submit",
+      "messageWarning": "Please enter a message"
+    },
+    "sideInfo": [
+      {
+        "title": "Construction and Installation",
+        "description": "Expert construction and installation of robust cranes for demanding environments.",
+        "icon": "icon4"
+      },
+      {
+        "title": "Crane Maintenance and Repair",
+        "description": "Comprehensive services for crane upkeep, ensuring reliability and longevity.",
+        "icon": "icon5"
+      },
+      {
+        "title": "Surface Coating and Refurbishment",
+        "description": "High-quality surface coating and refurbishment for crane preservation.",
+        "icon": "icon6"
+      }
+    ]
+  },
+  "footer": {
+    "socialNetworksText": "Get connected with us on social networks:",
+    "aboutFigr": {
+      "heading": "FIGR",
+      "description": "For the creation of high-quality metal structures, combining reliability and professionalism with modern technology, turn to us."
+    },
+    "products": {
+      "heading": "Products",
+      "items": [
+        {
+          "label": "Console Cranes"
+        },
+        {
+          "label": "Overhead Cranes"
+        },
+        {
+          "label": "Gantry / Semi-Gantry Cranes"
+        },
+        {
+          "label": "Mechanical Engineering"
+        }
+      ]
+    },
+
+    "contact": "Contact"
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "navBar": {
+    "home": "Avaleht",
+    "services": "Teenused",
+    "production": "Tootmine",
+    "installation": "Paigaldus",
+    "maintenance": "Hooldus",
+    "metalWork": "Metallitööd",
+    "products": "Tooted",
+    "consoleCranes": "Konsoolkraanid",
+    "gantryCranes": "Väravakraanad",
+    "overheadCranes": "Ülakraanad",
+    "mechanicalEngineering": "Mehaanikatehnika",
+    "projects": "Projektid",
+    "contacts": "Kontaktid"
+  },
+  "hero": {
+    "description": "Täpsest monteerimisest sujuva paigalduse, põhjaliku hoolduse kuni põhjalike remonditöödeni - meil on teie kraanavajadused kaetud. Meie ekspertiis hõlmab spetsialiseeritud pinnakattematerjale suurema vastupidavuse tagamiseks.",
+    "learnMore": "Lisateave"
+  },
+  "companyInfo": {
+    "completedProjects": "Valminud projektid",
+    "yearsInBusiness": "Aastad äris",
+    "activities": [
+      {
+        "title": "Ehitus ja paigaldus",
+        "description": "Ekspertide ehitus ja paigaldus tugevatele kraanadele nõudlikes keskkondades.",
+        "icon": "icon1"
+      },
+      {
+        "title": "Kraana hooldus ja remont",
+        "description": "Põhjalikud teenused kraanade hoolduseks, tagades usaldusväärsuse ja pika eluea.",
+        "icon": "icon2"
+      },
+      {
+        "title": "Pindade katmine ja taastamine",
+        "description": "Kvaliteetne pindade katmine ja taastamine kraanade säilitamiseks.",
+        "icon": "icon3"
+      }
+    ],
+    "mainHeading": "Metallilahendused püsivate infrastruktuuride loomiseks"
+  },
+  "aboutUs": {
+    "aboutHeading": "MEIST",
+    "subHeading": "Meie teadmistega tagame edu",
+    "description": "Toome üle 17-aastase kogemuse kraana- ja metalliehitustööstustesse, spetsialiseerudes tugevate kraanade ning teiste metallkonstruktsioonide valmistamisele, paigaldamisele ja hooldamisele. Üle 1200 lõpetatud projekti kogemusega pühendume tipptasemel lahenduste pakkumisele. Meie kõikehõlmavad teenused hõlmavad ehitust, paigaldust, hooldust, remonti ja pinnakatet, tagades teie seadmete pikaajalise vastupidavuse ja usaldusväärsuse. Usaldage meid ja saate tipptulemused igas kraanahoolduse aspektis."
+  },
+  "services": {
+    "maintenance": {
+      "heading": "Hooldus",
+      "description": "Kvaliteedile keskendudes pakume ekspertiisi remondi ja professionaalse pinnakatte osas kraanadele, suurendades nende vastupidavust ja pikendades nende kasutusiga."
+    },
+    "production": {
+      "heading": "Tootmine",
+      "description": "Alates põhjalikust hooldusest kuni täpse kokkupanekuni hõlmavad meie teenused iga kraanatootmise aspekti, tagades tipptasemel jõudluse ja ohutuse."
+    },
+    "installation": {
+      "heading": "Paigaldus",
+      "description": "Meie kogenud meeskond on spetsialiseerunud kraanade täpsele paigaldamisele, tagades sujuva integreerimise ja optimaalse funktsionaalsuse teie operatsioonide jaoks."
+    },
+    "buttonAriaLabel": "Nupp täiendava teabe saamiseks"
+  },
+  "project": {
+    "headingTop": "Meie tööd",
+    "subHeading": "Meie eriprojektid",
+    "heading": "Projekt",
+    "description": "Projekti kirjeldus",
+    "buttonText": "Loe rohkem"
+  },
+  "contacts": {
+    "phone": "Telefon",
+    "email": "E-post",
+    "address": "Aadress"
+  },
+  "quoteForm": {
+    "heading": {
+      "appointment": "Kohtumine",
+      "requestQuote": "Päring hinnapakkumise saamiseks"
+    },
+    "formFields": {
+      "fullName": "Täisnimi",
+      "fullNameWarning": "Palun sisestage oma täisnimi.",
+      "phone": "Telefon",
+      "phoneWarning": "Palun sisestage oma telefoninumber.",
+      "email": "E-posti aadress",
+      "emailWarning": "Palun sisestage kehtiv e-posti aadress.",
+      "selectService": "Valige teenus",
+      "serviceOptions": {
+        "choose": "Vali...",
+        "service1": "Teenus 1",
+        "service2": "Teenus 2",
+        "service3": "Teenus 3",
+        "warning": "Palun valige teenus."
+      },
+      "message": "Sõnum",
+      "submitBtn": "Esita",
+      "messageWarning": "Palun sisestage sõnum."
+    },
+    "sideInfo": [
+      {
+        "title": "Ehitus ja paigaldus",
+        "description": "Ekspertehitus ja paigaldus vastupidavatele kraanadele nõudlikes keskkondades.",
+        "icon": "icon4"
+      },
+      {
+        "title": "Kraana hooldus ja remont",
+        "description": "Põhjalikud teenused kraana korrashoiuks, tagades usaldusväärsuse ja pika eluea.",
+        "icon": "icon5"
+      },
+      {
+        "title": "Pinnakatte ja renoveerimine",
+        "description": "Kõrgekvaliteetne pinnakate ja renoveerimine kraanade säilitamiseks.",
+        "icon": "icon6"
+      }
+    ]
+  },
+  "footer": {
+    "socialNetworksText": "Ühendage meiega sotsiaalsetes võrgustikes:",
+    "aboutFigr": {
+      "heading": "FIGR",
+      "description": "Kõrgekvaliteetsete metallkonstruktsioonide loomiseks, ühendades usaldusväärsuse ja professionaalsuse kaasaegse tehnoloogiaga, pöörduge meie poole."
+    },
+    "products": {
+      "heading": "Tooted",
+      "items": [
+        {
+          "label": "Konsoolkraanid"
+        },
+        {
+          "label": "Pealmised kranid"
+        },
+        {
+          "label": "Portaal- / poolportaalkranid"
+        },
+        {
+          "label": "Mehaanikatehnika"
+        }
+      ]
+    },
+    "contact": "Kontaktid"
+  }
+  
+
+}

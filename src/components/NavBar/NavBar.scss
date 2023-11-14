@@ -12,21 +12,17 @@
 #basic-navbar-nav {
   flex-direction: column-reverse;
   align-items: flex-end;
-  .clr-black{
+  .clr-black {
     a {
       color: $black;
       transition: background-color 0.3s ease;
+      text-decoration: none;
 
       &:hover {
         color: $orange;
       }
     }
-}}
-
-#basic-navbar-socialmedia {
-  margin-bottom: 40px;
-
-  padding-left: 30px;
+  }
 }
 
 .flag {
@@ -39,8 +35,6 @@
   gap: 20px;
 }
 
-
-
 .navbar-nav .nav-link:hover {
   color: $orange;
 }
@@ -48,7 +42,6 @@
 .navbar-toggler-icon {
   border-radius: 5px;
 }
-
 
 .navbar-toggler:hover {
   background-color: $orange-light;
@@ -59,9 +52,9 @@
     margin-right: 1%;
   }
 
-  .navbar-nav{
+  .navbar-nav {
     margin-top: 20px;
-    a{
+    a {
       color: $black;
     }
   }
@@ -69,30 +62,54 @@
   .nav-link {
     gap: 10px;
   }
-  #basic-navbar-socialmedia {
-    margin-bottom: 0px;
-  }
 
   .logo {
     width: 200px;
     height: 64px;
   }
-  #basic-navbar-socialmedia {
-    padding-left: 0;
-    display: none;
-  }
 
-  
   #navbar-icons-languages {
     flex-direction: row;
 
+    .nav-item {
+      padding-right: 15px;
+    }
+  }
 
-     
-      .nav-item {
-            padding-right: 15px;
+  .bg-body-tertiary {
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+  }
+}
 
-      }
-    
+@media (max-width: 555px) {
+  #container-id {
+    padding-left: 0;
+  }
+
+  .navbar-nav {
+    margin-top: 20px;
+    a {
+      color: $black;
+    }
+  }
+  .navbar-nav,
+  .nav-link {
+    gap: 10px;
+  }
+
+  .logo {
+    width: 130px;
+    height: 40px;
+  }
+
+  #navbar-icons-languages {
+    flex-direction: row;
+
+    .nav-item {
+      padding-right: 15px;
+    }
   }
 
   .bg-body-tertiary {

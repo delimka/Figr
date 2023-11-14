@@ -1,17 +1,19 @@
 import { useState } from "react";
+import { useTranslation } from 'react-i18next';
 import "./Projects.scss";
 import AnimatedImageContainer from "../../helpers/hooks/AnimatedImageContainer";
 import ModalImage from "../../helpers/hooks/ModalImage";
 import OrangeBtn from "./../OrangeBtn/OrangeBtn";
-import image1 from "./../../assets/projects/project1.jpg";
-import image2 from "./../../assets/projects/project2.jpg";
+import image1 from "./../../assets/projects/project1.webp";
+import image2 from "./../../assets/projects/project2.webp";
 import image3 from "./../../assets/projects/project3.jpg";
-import image4 from "./../../assets/projects/project4.jpg";
-import image5 from "./../../assets/projects/project5.jpg";
+import image4 from "./../../assets/projects/project4.webp";
+import image5 from "./../../assets/projects/project5.webp";
 
 function Projects() {
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
+  const { t } = useTranslation();
 
   const handleImageClick = (index: number) => {
     console.log("handleImageClick called");
@@ -25,9 +27,9 @@ function Projects() {
     setSelectedImage(null);
   };
   return (
-    <section className="projects-container">
-      <h2>Our works</h2>
-      <h1>Our special projects</h1>
+    <div className="projects-container">
+      <h2>{t("project.headingTop")}</h2>
+      <h1>{t("project.subHeading")}</h1>
       <div className="grid-container">
         <AnimatedImageContainer
           threshold={0.2}
@@ -36,7 +38,7 @@ function Projects() {
           onClick={() => handleImageClick(0)}
         >
           <div className="project-photo project-photo-1">
-            <img src={image1} alt="Project 1" />
+            <img src={image1} alt="Project 1" loading="lazy"/>
           </div>
         </AnimatedImageContainer>
 
@@ -47,11 +49,11 @@ function Projects() {
         >
           <div className="project-photo project-photo-2 ">
             <div className="overlay">
-              <h3>Project 2</h3>
-              <p>Project Description</p>
-              <OrangeBtn>Learn more&nbsp;&nbsp;→</OrangeBtn>
+              <h3>{t("project.heading")}</h3>
+              <p>{t("project.description")}</p>
+              <OrangeBtn>{t("project.buttonText")}&nbsp;&nbsp;→</OrangeBtn>
             </div>
-            <img src={image2} alt="Project 2" />
+            <img src={image2} alt="Project 2" loading="lazy"/>
           </div>
         </AnimatedImageContainer>
 
@@ -62,7 +64,7 @@ function Projects() {
           onClick={() => handleImageClick(2)}
         >
           <div className="project-photo project-photo-3 ">
-            <img src={image3} alt="Project 3" />
+            <img src={image3} alt="Project 3" loading="lazy"/>
           </div>
         </AnimatedImageContainer>
 
@@ -73,7 +75,7 @@ function Projects() {
           onClick={() => handleImageClick(3)}
         >
           <div className="project-photo project-photo-4 ">
-            <img src={image4} alt="Project 4" />
+            <img src={image4} alt="Project 4" loading="lazy"/>
           </div>
         </AnimatedImageContainer>
 
@@ -84,7 +86,7 @@ function Projects() {
           onClick={() => handleImageClick(4)}
         >
           <div className="project-photo project-photo-5 ">
-            <img src={image5} alt="Project 5" />
+            <img src={image5} alt="Project 5" loading="lazy"/>
           </div>
         </AnimatedImageContainer>
       </div>
@@ -97,8 +99,8 @@ function Projects() {
           altText={`Project ${selectedImage + 1}`}
           initialSlide={selectedImage}
         />
-      ) : null}
-    </section>
+      ) : undefined}
+    </div>
   );
 }
 

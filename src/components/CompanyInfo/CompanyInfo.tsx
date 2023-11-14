@@ -1,4 +1,5 @@
 import  { useState } from "react";
+import { useTranslation } from 'react-i18next'; 
 import "./CompanyInfo.scss";
 import ResizeHandler from "../../helpers/hooks/ResizeHandler";
 import AnimatedImageContainer from "../../helpers/hooks/AnimatedImageContainer";
@@ -10,30 +11,37 @@ const CompanyInfo = () => {
   const startYear = 2006;
   const currentYear = new Date().getFullYear();
   const yearsInBusiness = currentYear - startYear + "+";
+  const { t } = useTranslation();
 
   // Mock data for completed projects and main activities
-  const completedProjects = 1200;
-  const mainActivities = [
+  const completedProjects = '999+';
+  const yearsInBusinessText = t('companyInfo.yearsInBusiness');
+  const completedProjectsText = t('companyInfo.completedProjects');
+
+  interface ActivityType  {
+    title: string;
+    description: string;
+    icon: string; 
+  }
+
+  const mainActivities: ActivityType[] = [
     {
-      title: "Construction and Installation",
-      description:
-        "Expert construction and installation of robust cranes for demanding environments.",
+      title: t('companyInfo.activities.0.title'),
+      description: t('companyInfo.activities.0.description'),
       icon: icon1,
     },
     {
-      title: "Crane Maintenance and Repair",
-      description:
-        "Comprehensive services for crane upkeep, ensuring reliability and longevity.",
+      title: t('companyInfo.activities.1.title'),
+      description: t('companyInfo.activities.1.description'),
       icon: icon2,
     },
     {
-      title: "Surface Coating and Refurbishment",
-      description:
-        "High-quality surface coating and refurbishment for crane preservation.",
+      title: t('companyInfo.activities.2.title'),
+      description: t('companyInfo.activities.2.description'),
       icon: icon3,
     },
   ];
-
+  const mainHeading = t('companyInfo.mainHeading');
   // Motion
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -42,24 +50,24 @@ const CompanyInfo = () => {
   const animateY = windowWidth <= 1120;
 
   return (
-    <section className="company-info">
+    <div className="company-info">
       <ResizeHandler setWindowWidth={setWindowWidth} />
       <AnimatedImageContainer
         threshold={0.2}
         initialX={animateX ? -60 : 0}
-        initialY={animateY ? 60 : 0}
+        initialY={animateY ? 20 : 0}
         className="info-boxes-container"
         animateX={animateX}
         animateY={animateY}
       >
         <div className="info-box-projects">
           <span className="info-span">{completedProjects}</span>
-          <h4 className="info-heading-4">Completed Projects</h4>
+          <h4 className="info-heading-4">{completedProjectsText}</h4>
         </div>
 
         <div className="info-box-activity">
           <span className="info-span">{yearsInBusiness}</span>
-          <h4 className="info-heading-4">Years in Business</h4>
+          <h4 className="info-heading-4">{yearsInBusinessText}</h4>
         </div>
       </AnimatedImageContainer>
 
@@ -67,16 +75,16 @@ const CompanyInfo = () => {
         className="outer-container"
         threshold={0.2}
         initialX={animateX ? 60 : 0}
-        initialY={animateY ? 60 : 0}
+        initialY={animateY ? 20 : 0}
         animateX={animateX}
         animateY={animateY}
       >
         <div className="main-activity-box">
           <h2 className="main-heading-2">
-          Crafting Metal Solutions for Enduring Infrastructures
+          {mainHeading}
           </h2>
           <ul>
-            {mainActivities.map((activity, index) => (
+          {mainActivities.map((activity: ActivityType, index: number) => (
               <li key={index} className="activity-item">
                 <div className="icon-container">
                   <img
@@ -94,7 +102,7 @@ const CompanyInfo = () => {
           </ul>
         </div>
       </AnimatedImageContainer>
-    </section>
+    </div>
   );
 };
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next'; 
 import Form from 'react-bootstrap/Form';
 import OrangeBtn from "./../OrangeBtn/OrangeBtn";
 import './QuoteForm.scss';
@@ -8,6 +9,7 @@ import icon6 from "./../../assets/info-icons/Vector6.svg";
 
 function QuoteForm() {
   const [validated, setValidated] = useState(false);
+  const { t } = useTranslation();
 
   const handleSubmit = (event:React.FormEvent<HTMLFormElement>) => {
     const form = event.currentTarget;
@@ -19,45 +21,51 @@ function QuoteForm() {
     setValidated(true);
   };
 
-  const QuoteSideInfo = [
+  interface ActivityType{
+    title: string;
+    description:string;
+    icon: string;
+  }
+  const QuoteSideInfo: ActivityType[] = [
     {
-      title: "Construction and Installation",
-      description: "Expert construction and installation of robust cranes for demanding environments.",
+      title: t('quoteForm.sideInfo.0.title'),
+      description: t('quoteForm.sideInfo.0.description'),
       icon: icon4,
     },
     {
-      title: "Crane Maintenance and Repair",
-      description: "Comprehensive services for crane upkeep, ensuring reliability and longevity.",
+      title: t('quoteForm.sideInfo.1.title'),
+      description: t('quoteForm.sideInfo.1.description'),
       icon: icon5,
     },
     {
-      title: "Surface Coating and Refurbishment",
-      description: "High-quality surface coating and refurbishment for crane preservation.",
+      title: t('quoteForm.sideInfo.2.title'),
+      description: t('quoteForm.sideInfo.2.description'),
       icon: icon6,
     },
   ];
 
+
   return (
-    <section className='quote-request-container'>
+    <div className='quote-request-container'>
       <Form noValidate validated={validated} onSubmit={handleSubmit}>
-        <h3>Appointment</h3>
-        <h2>Request a Quote</h2>
+        <h3>{t('quoteForm.heading.appointment')}</h3>
+        <h2>{t('quoteForm.heading.requestQuote')}</h2>
         <div className="row">
           <div className="col-md-6">
             <Form.Group controlId="fullName">
-              <Form.Label>Full Name</Form.Label>
+              <Form.Label>{t('quoteForm.formFields.fullName')}</Form.Label>
               <Form.Control type="text"  required />
               <Form.Control.Feedback type="invalid">
-                Please enter your full name.
+              {t('quoteForm.formFields.fullNameWarning')}
               </Form.Control.Feedback>
             </Form.Group>
           </div>
           <div className="col-md-6">
             <Form.Group controlId="phone">
-              <Form.Label>Phone</Form.Label>
+              <Form.Label>{t('quoteForm.formFields.phone')}</Form.Label>
               <Form.Control type="tel" autoComplete="on" required />
               <Form.Control.Feedback type="invalid" >
-                Please enter your phone number.
+              {t('quoteForm.formFields.phoneWarning')}
               </Form.Control.Feedback>
             </Form.Group>
           </div>
@@ -66,24 +74,24 @@ function QuoteForm() {
         <div className="row">
           <div className="col-md-6">
             <Form.Group controlId="email">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label>{t('quoteForm.formFields.email')}</Form.Label>
               <Form.Control type="email" autoComplete="on"  required />
               <Form.Control.Feedback type="invalid">
-                Please enter a valid email address.
+              {t('quoteForm.formFields.emailWarning')}
               </Form.Control.Feedback>
             </Form.Group>
           </div>
           <div className="col-md-6">
             <Form.Group controlId="service">
-              <Form.Label>Select Service</Form.Label>
+              <Form.Label>{t('quoteForm.formFields.selectService')}</Form.Label>
               <Form.Control as="select"  required>
-                <option value="">Choose...</option>
-                <option value="service1">Service 1</option>
-                <option value="service2">Service 2</option>
-                <option value="service3">Service 3</option>
+                <option value="">{t('quoteForm.formFields.serviceOptions.choose')}</option>
+                <option value="service1">{t('quoteForm.formFields.serviceOptions.service1')}</option>
+                <option value="service2">{t('quoteForm.formFields.serviceOptions.service2')}</option>
+                <option value="service3">{t('quoteForm.formFields.serviceOptions.service3')}</option>
               </Form.Control>
               <Form.Control.Feedback type="invalid">
-                Please select a service.
+              {t('quoteForm.formFields.serviceOptions.warning')}
               </Form.Control.Feedback>
             </Form.Group>
           </div>
@@ -92,20 +100,20 @@ function QuoteForm() {
         <div className="row">
           <div className="col-md-12">
             <Form.Group controlId="message">
-              <Form.Label>Message</Form.Label>
+              <Form.Label>{t('quoteForm.formFields.message')}</Form.Label>
               <Form.Control as="textarea" rows={3}  required />
               <Form.Control.Feedback type="invalid">
-                Please enter a message.
+              {t('quoteForm.formFields.messageWarning')}
               </Form.Control.Feedback>
             </Form.Group>
           </div>
         </div>
 
-        <OrangeBtn>Submit</OrangeBtn>
+        <OrangeBtn>{t('quoteForm.formFields.submitBtn')}</OrangeBtn>
       </Form>
       <div className='quote-form-info'>
         <ul>
-          {QuoteSideInfo.map((activity, index) => (
+          {QuoteSideInfo.map((activity:ActivityType, index:number) => (
             <li key={index} className="activity-item">
               <div className="icon-container">
                 <img
@@ -122,7 +130,7 @@ function QuoteForm() {
           ))}
         </ul>
       </div>
-    </section>
+    </div>
   );
 }
 

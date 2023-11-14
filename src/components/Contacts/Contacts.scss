@@ -21,7 +21,7 @@
         rgba($black, 0) 75%,
         rgba($purple-light, 0.4) 100%
       ),
-      url("./../../assets/contacts-images/map-image.jpg");
+      url("./../../assets/contacts-images/map-image.webp");
   background-size: cover;
   background-position: center;
   cursor: pointer;
@@ -127,12 +127,21 @@
   .left-contact-container,
   .right-contact-container {
     @include flexCenter(column);
+    ul{
+      display: flex;
+      flex-direction: row;
+      margin-right: 3%;
+      padding-left: 0;
+    }
+    .adress-container{
+      margin-right: 3%;
+
+    }
   }
   .left-contact-container {
     transform: translateY(50px) !important;
   }
   .right-contact-container {
-    @include flexCenter(row);
     gap: 15px;
   }
 }

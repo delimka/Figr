@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from 'react-i18next'; 
 import { Element, Link as ScrollLink } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
@@ -8,15 +9,18 @@ import Carousel from "react-bootstrap/Carousel";
 import OrangeBtn from "./../OrangeBtn/OrangeBtn";
 import AnimatedImageContainer from "../../helpers/hooks/AnimatedImageContainer";
 import ResizeHandler from "../../helpers/hooks/ResizeHandler";
-import image1 from "./../../assets/about-images/about_photo.jpg";
+import image1 from "./../../assets/about-images/about_photo.webp";
 import image2 from "./../../assets/about-images/about_photo1.jpg";
-import image3 from "./../../assets/about-images/about_photo2.jpg";
+import image3 from "./../../assets/about-images/about_photo2.webp";
 // import ImageSlider from "./../../helpers/ImageSlider/ImageSlider";
 
 function AboutUs() {
   const [showModal, setShowModal] = useState(false);
   const [videoLink, setVideoLink] = useState("");
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const { t } = useTranslation();
+
 
   const handleOpenModal = (link: string) => {
     setVideoLink(link);
@@ -28,22 +32,11 @@ function AboutUs() {
   const animateY = true;
 
   return (
-    <Element name="about">
-      <section className="about-container ">
+    <Element name="about" className="about-container" >
         <div className="left-container">
-          <h3 className="about-h3"> ABOUT US</h3>
-          <h2 className="about-h2"> With our knowledge we guarantee success</h2>
-          <p className="about-p">
-            Bringing over 17 years of expertise to the crane and metal
-            construction industries, our company specializes in crafting,
-            installing, and maintaining robust cranes, as well as other metal
-            structures. With a track record of over 1200 completed projects, we
-            are dedicated to providing top-quality solutions. Our comprehensive
-            services include construction, installation, maintenance, repair,
-            and surface coating, ensuring the longevity and reliability of your
-            equipment. Trust us to deliver excellence in every aspect of crane
-            care.
-          </p>
+          <h3 className="about-h3"> {t('aboutUs.aboutHeading')}</h3>
+          <h2 className="about-h2"> {t('aboutUs.subHeading')}</h2>
+          <p className="about-p">{t('aboutUs.description')} </p>
           <ScrollLink
             activeClass="active"
             to="services"
@@ -62,12 +55,12 @@ function AboutUs() {
             <Carousel>
               <Carousel.Item>
                 <div className="" title="Metallkonstruktsiooni paigaldus">
-                  <img src={image1} alt="Image 1" />
+                  <img src={image1} alt="Image 1" loading="lazy"/>
                 </div>
               </Carousel.Item>
               <Carousel.Item>
                 <div className="" title="Silda kraana paigaldus">
-                  <img src={image2} alt="Image 2" />
+                  <img src={image2} alt="Image 2" loading="lazy"/>
                 </div>
               </Carousel.Item>
               <Carousel.Item>
@@ -76,13 +69,13 @@ function AboutUs() {
                     className="play-button"
                     onClick={() =>
                       handleOpenModal(
-                        "https://www.youtube.com/embed/sifXs4XVK7g"
+                        "https://www.youtube.com/watch?v=oSyC8pxJdeQ"
                       )
                     }
                   >
                     <FontAwesomeIcon icon={faPlay} />
                   </div>
-                  <img src={image3} alt="Image 3" />
+                  <img src={image3} alt="Image 3"  loading="lazy"/>
                 </div>
               </Carousel.Item>
             </Carousel>
@@ -97,7 +90,7 @@ function AboutUs() {
                   className="photo photo-1"
                   title="Metallkonstruktsiooni paigaldus"
                 >
-                  <img src={image1} alt="Image 1" />
+                  <img src={image1} alt="Image 1" loading="lazy" />
                 </div>
               </AnimatedImageContainer>
 
@@ -107,7 +100,7 @@ function AboutUs() {
                 animateY={animateY}
               >
                 <div className="photo photo-2" title="Silda kraana paigaldus">
-                  <img src={image2} alt="Image 2" />
+                  <img src={image2} alt="Image 2" loading="lazy" />
                 </div>
               </AnimatedImageContainer>
 
@@ -127,7 +120,7 @@ function AboutUs() {
                   >
                     <FontAwesomeIcon icon={faPlay} />
                   </div>
-                  <img src={image3} alt="Image 3" />
+                  <img src={image3} alt="Image 3" loading="lazy"/>
                 </div>
               </AnimatedImageContainer>
 
@@ -139,7 +132,6 @@ function AboutUs() {
             </>
           )}
         </div>
-      </section>
     </Element>
   );
 }
