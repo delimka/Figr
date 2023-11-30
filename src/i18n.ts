@@ -30,7 +30,8 @@ const initializeI18n = async () => {
 };
 
 initializeI18n().catch(() => {
-  // Handle errors 
+  // catche error
 });
 
 export default i18n;
+ 

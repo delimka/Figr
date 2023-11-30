@@ -1,20 +1,24 @@
 import NavBar from './components/NavBar/NavBar.tsx';
-import Hero from './components/Hero/Hero.tsx';
-import CompanyInfo from './components/CompanyInfo/CompanyInfo.tsx';
-import AboutUs from './components/AboutUs/AboutUs.tsx';
-import Services from './components/Services/Services.tsx';
-import Projects from './components/Projects/Projects.tsx';
-import Contacts from './components/Contacts/Contacts.tsx';
-import QuoteForm from './components/QuoteForm/QuoteForm.tsx';
-import Footer from './components/Footer/Footer.tsx';
-
+import { lazy, Suspense } from 'react';
+const Hero = lazy(() => import('./components/Hero/Hero.tsx'));
+const Services = lazy(() => import('./components/Services/Services.tsx'));
+const Projects = lazy(() => import('./components/Projects/Projects.tsx'));
+const AboutUs = lazy(() => import('./components/AboutUs/AboutUs.tsx'));
+const QuoteForm = lazy(() => import('./components/QuoteForm/QuoteForm.tsx'));
+const Footer = lazy(() => import('./components/Footer/Footer.tsx'));
+const Contacts = lazy(() => import('./components/Contacts/Contacts.tsx'));
+const CompanyInfo = lazy(() => import('./components/CompanyInfo/CompanyInfo.tsx'));
+import Loader from "./helpers/loader.tsx";
 
 
 const App = () => {
   return (
-    <>
+      <>
       <NavBar />
-      <Hero />
+      <Suspense fallback={<Loader/>}>
+      <Hero/>
+      </Suspense>
+      <Suspense>
       <CompanyInfo/>
       <AboutUs/>
       <Services/>
@@ -22,6 +26,7 @@ const App = () => {
       <Contacts/>
       <QuoteForm/>
       <Footer/>
+      </Suspense>
     </>
   );
 };

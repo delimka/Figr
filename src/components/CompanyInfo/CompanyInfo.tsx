@@ -11,10 +11,13 @@ const CompanyInfo = () => {
   const startYear = 2006;
   const currentYear = new Date().getFullYear();
   const yearsInBusiness = currentYear - startYear + "+";
+  const completedProjects = '999+';
+
+  
   const { t } = useTranslation();
 
   // Mock data for completed projects and main activities
-  const completedProjects = '999+';
+  
   const yearsInBusinessText = t('companyInfo.yearsInBusiness');
   const completedProjectsText = t('companyInfo.completedProjects');
 
@@ -26,7 +29,7 @@ const CompanyInfo = () => {
 
   const mainActivities: ActivityType[] = [
     {
-      title: t('companyInfo.activities.0.title'),
+      title: t('quoteForm.sideInfo.0.title'),
       description: t('companyInfo.activities.0.description'),
       icon: icon1,
     },
@@ -48,14 +51,14 @@ const CompanyInfo = () => {
   // Determine whether to animate along the x-axis or y-axis depending on screen size
   const animateX = windowWidth > 1120;
   const animateY = windowWidth <= 1120;
-
+ 
   return (
     <div className="company-info">
       <ResizeHandler setWindowWidth={setWindowWidth} />
       <AnimatedImageContainer
         threshold={0.2}
         initialX={animateX ? -60 : 0}
-        initialY={animateY ? 20 : 0}
+        initialY={animateY ? 0 : 0}
         className="info-boxes-container"
         animateX={animateX}
         animateY={animateY}

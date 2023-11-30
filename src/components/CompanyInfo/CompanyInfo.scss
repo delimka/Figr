@@ -36,8 +36,7 @@
   padding: 0 10% 0 5px;
   gap: 10px;
   z-index: 20;
-  transform: translateY(-250px);
-
+  transform: translate3d(0, -250px, 0);
   &:before {
     content: "";
     position: absolute;
@@ -131,7 +130,7 @@
   }
   .info-box-activity,
   .info-box-projects {
-    transform: translateY(-25px);
+    transform: translate3d(0, -25px, 0);
   }
   .outer-container {
     order: 1;

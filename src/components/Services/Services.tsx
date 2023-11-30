@@ -1,11 +1,11 @@
 import { useTranslation } from "react-i18next";
-import LinesEllipsis from 'react-lines-ellipsis';
+import LinesEllipsis from "react-lines-ellipsis";
 import { Element } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import image0 from "./../../assets/services/image0.jpg";
+import image0 from "./../../assets/services/image0.webp";
 import image1 from "./../../assets/services/image-installation.webp";
-import image2 from "./../../assets/services/image-production.jpg";
+import image2 from "./../../assets/services/image-production.webp";
 import image3 from "./../../assets/services/image-surfacecoating.webp";
 import "./Services.scss";
 
@@ -24,8 +24,8 @@ const Services = () => {
           <h2>{t("services.maintenance.heading")}</h2>
           <LinesEllipsis
             text={t("services.maintenance.description")}
-            maxLine="4" 
-            ellipsis="..."
+            maxLine="4"
+            ellipsis=" . . ."
             trimRight
             basedOn="words"
             className="service-p"
@@ -44,8 +44,8 @@ const Services = () => {
           <h2>{t("services.production.heading")}</h2>
           <LinesEllipsis
             text={t("services.production.description")}
-            maxLine="4" 
-            ellipsis="..."
+            maxLine="4"
+            ellipsis=" . . ."
             trimRight
             basedOn="letters"
             className="service-p"
@@ -64,8 +64,8 @@ const Services = () => {
           <h2>{t("services.installation.heading")}</h2>
           <LinesEllipsis
             text={t("services.installation.description")}
-            maxLine="4" 
-            ellipsis="..."
+            maxLine="4"
+            ellipsis=" . . ."
             trimRight
             basedOn="letters"
             className="service-p"

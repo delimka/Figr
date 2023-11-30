@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next";
 import "./Projects.scss";
 import AnimatedImageContainer from "../../helpers/hooks/AnimatedImageContainer";
 import ModalImage from "../../helpers/hooks/ModalImage";
 import OrangeBtn from "./../OrangeBtn/OrangeBtn";
 import image1 from "./../../assets/projects/project1.webp";
 import image2 from "./../../assets/projects/project2.webp";
-import image3 from "./../../assets/projects/project3.jpg";
+import image3 from "./../../assets/projects/project3.webp";
 import image4 from "./../../assets/projects/project4.webp";
 import image5 from "./../../assets/projects/project5.webp";
 
@@ -33,18 +33,18 @@ function Projects() {
       <div className="grid-container">
         <AnimatedImageContainer
           threshold={0.2}
-          yValue={20}
+          yValue={-10}
           className="grid-item double-row"
           onClick={() => handleImageClick(0)}
         >
           <div className="project-photo project-photo-1">
-            <img src={image1} alt="Project 1" loading="lazy"/>
+            <img src={image1} alt="Project 1" loading="lazy" />
           </div>
         </AnimatedImageContainer>
 
         <AnimatedImageContainer
           threshold={0.2}
-          yValue={20}
+          yValue={-10}
           className="grid-item "
         >
           <div className="project-photo project-photo-2 ">
@@ -53,42 +53,42 @@ function Projects() {
               <p>{t("project.description")}</p>
               <OrangeBtn>{t("project.buttonText")}&nbsp;&nbsp;→</OrangeBtn>
             </div>
-            <img src={image2} alt="Project 2" loading="lazy"/>
+            <img src={image2} alt="Project 2" loading="lazy" />
           </div>
         </AnimatedImageContainer>
 
         <AnimatedImageContainer
           threshold={0.2}
-          yValue={20}
+          yValue={-10}
           className="grid-item"
           onClick={() => handleImageClick(2)}
         >
           <div className="project-photo project-photo-3 ">
-            <img src={image3} alt="Project 3" loading="lazy"/>
+            <img src={image3} alt="Project 3" loading="lazy" />
           </div>
         </AnimatedImageContainer>
 
         <AnimatedImageContainer
           threshold={0.2}
-          yValue={20}
+          yValue={-10}
           className="grid-item grid-item-remove"
           onClick={() => handleImageClick(3)}
         >
           <div className="project-photo project-photo-4 ">
-            <img src={image4} alt="Project 4" loading="lazy"/>
+            <img src={image4} alt="Project 4" loading="lazy" />
           </div>
         </AnimatedImageContainer>
 
         <AnimatedImageContainer
           threshold={0.2}
-          yValue={20}
+          yValue={-10}
           className="grid-item grid-item-remove"
           onClick={() => handleImageClick(4)}
         >
           <div className="project-photo project-photo-5 ">
-            <img src={image5} alt="Project 5" loading="lazy"/>
+            <img src={image5} alt="Project 5" loading="lazy" />
           </div>
-        </AnimatedImageContainer>
+          </AnimatedImageContainer>
       </div>
 
       {selectedImage !== null ? (

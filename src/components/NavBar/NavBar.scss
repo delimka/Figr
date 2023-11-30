@@ -58,10 +58,6 @@
       color: $black;
     }
   }
-  .navbar-nav,
-  .nav-link {
-    gap: 10px;
-  }
 
   .logo {
     width: 200px;
@@ -71,8 +67,8 @@
   #navbar-icons-languages {
     flex-direction: row;
 
-    .nav-item {
-      padding-right: 15px;
+    a {
+      padding-right: 25px;
     }
   }
 

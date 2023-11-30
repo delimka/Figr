@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next'; 
 import { MDBFooter, MDBContainer, MDBRow, MDBCol } from 'mdb-react-ui-kit';
-import { BiLogoGmail} from "react-icons/bi";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -27,7 +26,7 @@ export default function App() {
           <FontAwesomeIcon icon={faInstagram} />
           </a>
           <a href='https://wwww.gmail.com/' className='me-4 text-reset' aria-label="Gmail">
-          <BiLogoGmail/>      
+          <FontAwesomeIcon icon={faEnvelope} />
             </a>
           
         </div>

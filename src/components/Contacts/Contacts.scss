@@ -9,26 +9,7 @@
 .map-container {
   width: 100%;
   height: 70%;
-  background: 
-      linear-gradient(
-        rgba($purple-light, 0.3),
-        rgba($purple-light, 0)
-      ),
-      linear-gradient(
-        to right,
-        rgba($purple-light, 0.4) 0%,
-        rgba($black, 0) 25%,
-        rgba($black, 0) 75%,
-        rgba($purple-light, 0.4) 100%
-      ),
-      url("./../../assets/contacts-images/map-image.webp");
-  background-size: cover;
-  background-position: center;
-  cursor: pointer;
-
-  
 }
-
 
 .details-container {
   display: flex;
@@ -40,8 +21,8 @@
 
 .adress-container {
   background-color: $white;
-  box-shadow: 0px -20px 15px 0px rgba(0, 0, 0, 0.2), 
-  0px 10px 15px 5px rgba(0, 0, 0, 0);   
+  box-shadow: 0px -20px 15px 0px rgba(0, 0, 0, 0.2),
+    0px 10px 15px 5px rgba(0, 0, 0, 0);
   width: 480px;
   padding: 4% 15% 5% 4%;
   margin-right: 20px;
@@ -111,7 +92,7 @@
 
 @media (max-width: 870px) {
   .map-container {
-    height: 60%;
+    height: 55%;
   }
 
   .details-container {
@@ -127,30 +108,34 @@
   .left-contact-container,
   .right-contact-container {
     @include flexCenter(column);
-    ul{
+    ul {
       display: flex;
       flex-direction: row;
       margin-right: 3%;
       padding-left: 0;
     }
-    .adress-container{
+    .adress-container {
       margin-right: 3%;
+      box-shadow: 0px -10px 15px 0px rgba(0, 0, 0, 0.2),
 
     }
   }
   .left-contact-container {
-    transform: translateY(50px) !important;
+    transform: translateY(80px) !important;
   }
   .right-contact-container {
     gap: 15px;
+    padding-top: 30px;
+
   }
 }
 
 @media (max-width: 555px) {
-  .map-container {
-    height: 40%;
-  }
 
+  .contact-container{
+    display: flex;
+    flex-direction: column-reverse;
+  }
   .details-container {
     margin: 0;
   }
@@ -182,6 +167,9 @@
 
 @media (max-width: 440px) {
   .left-contact-container {
+    .adress-container {
+      @include flexCenter(column);
+    }
     margin-left: 10px;
   }
   .adress-container {
@@ -191,14 +179,15 @@
 
     h1 {
       font-size: 25px;
+      text-align: center;
     }
   }
 
   .activity-info-data {
     font-size: 12px;
 
-    a , label{
-      
+    a,
+    label {
       padding-bottom: 4px;
     }
   }
@@ -206,10 +195,13 @@
   .contact-icon-container {
     transform: scale(0.2);
     padding-bottom: 4px;
-
   }
   .right-contact-container {
     flex-direction: row;
-    align-items: center;
+    justify-content: center;
+
+    .contact-items:first-child {
+      padding-right: 10px;
+    }
   }
 }

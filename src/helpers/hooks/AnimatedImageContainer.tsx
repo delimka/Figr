@@ -18,7 +18,7 @@ interface AnimatedImageContainerProps {
 function AnimatedImageContainer({ threshold, children, yValue, xValue, className, initialX, initialY, onClick, animateX, animateY }: AnimatedImageContainerProps) {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: threshold || 0.2,
+    threshold: threshold || 0.1,
   });
 
   console.log("InView:", inView);

@@ -7,7 +7,7 @@
     url("./../../assets/hero-bg.webp") center top;
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
+  min-height: 100svh;
   user-select: none;
 
 }
@@ -75,11 +75,11 @@
 
 
 @media (min-height: 1200.98px){
-  .hero{ height:100vh;}
+  .hero{ height:100svh;}
 }
 
 @media (max-width: 991.98px) and (max-height: 1200.97px) and (min-height:800px ){
-  .hero{ height:90vh;}
+  .hero{ height:80svh;}
 }
 
 
