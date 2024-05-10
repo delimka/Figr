@@ -1,0 +1,58 @@
+@import "./../../helpers/helpers.scss";
+.otherServicesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.carouselContainer {
+  padding: 50px 0;
+  position: relative;
+  
+  .carouselTrack {
+    padding-bottom: 30px;
+  }
+}
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+}
+.item {
+  display: grid;
+  place-content: center;
+  transition: 0.5s ease-in-out;
+  z-index: 2;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.button {
+  display: block;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background-color 0.3s;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+@media (max-width: 730px) {
+  .buttonContainer {
+    display: none;
+  }
+}

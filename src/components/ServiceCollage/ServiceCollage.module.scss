@@ -1,0 +1,11 @@
+.collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 10px;
+}
+.collageImg {
+  width: 100%;
+  min-height: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}

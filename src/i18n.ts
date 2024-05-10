@@ -1,8 +1,8 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import translationEN from './languages/en.json';
-import translationRU from './languages/ru.json';
-import translationEST from './languages/est.json';
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import translationEN from "./languages/en.json";
+import translationRU from "./languages/ru.json";
+import translationEST from "./languages/est.json";
 
 const resources = {
   en: {
@@ -17,21 +17,24 @@ const resources = {
 };
 
 const initializeI18n = async () => {
-  await i18n
-    .use(initReactI18next)
-    .init({
-      resources,
-      lng: 'est', 
-      interpolation: {
-        escapeValue: false, 
-      },
-    });
-    
+  const defaultLanguage = "est";
+  const savedLanguage = localStorage.getItem("i18nextLng") || defaultLanguage;
+
+  await i18n.use(initReactI18next).init({
+    resources,
+    lng: savedLanguage,
+    interpolation: {
+      escapeValue: false,
+    },
+    detection: {
+      order: ["localStorage", "navigator"],
+      caches: ["localStorage"],
+    }
+  });
 };
 
 initializeI18n().catch(() => {
-  // catche error
+  //dsadas
 });
 
 export default i18n;
- 

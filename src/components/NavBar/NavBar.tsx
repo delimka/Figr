@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { Link as ScrollLink } from "react-scroll";
+import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -21,6 +21,7 @@ const NavBar = () => {
       .changeLanguage(lng)
       .then(() => {
         setExpanded(false);
+        localStorage.setItem("i18nextLng", lng);
       })
       .catch((error) => {
         console.error(`Error changing language to ${lng}:`, error);
@@ -29,16 +30,13 @@ const NavBar = () => {
 
   const handleClickOutside = (event: MouseEvent) => {
     if (navRef.current && !navRef.current.contains(event.target as Node)) {
-      // Click occurred outside the navbar
       setExpanded(false);
     }
   };
 
   useEffect(() => {
-    // Add event listener when the component mounts
     document.addEventListener("click", handleClickOutside);
 
-    // Remove event listener when the component unmounts
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
@@ -52,86 +50,93 @@ const NavBar = () => {
       onToggle={() => setExpanded(!expanded)}
       ref={navRef}
     >
-      <Container id="container-id">
+      <Container id="nav-container-id">
         <img className="logo" src={logo} alt="Figr logo" />
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="clr-black">
-            <ScrollLink
-              activeClass="active"
-              to="hero"
-              spy={true}
-              smooth={true}
-              offset={-300}
-              duration={300}
+            <NavLink
               onClick={() => setExpanded(false)}
+              to="/"
+              className="nav-link"
             >
-              <Nav.Link>{t("navBar.home")}</Nav.Link>
-            </ScrollLink>
-
+              {t("navBar.home")}
+            </NavLink>
             <NavDropdown title={t("navBar.services")}>
-              <NavDropdown.Item href="#action/3.1" aria-label="Production">
+              <NavDropdown.Item
+                as={NavLink}
+                to="/production"
+                onClick={() => setExpanded(false)}
+              >
                 {t("navBar.production")}
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2" aria-label="Installation">
+              <NavDropdown.Item
+                as={NavLink}
+                onClick={() => setExpanded(false)}
+                to="/installation"
+              >
                 {t("navBar.installation")}
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3" aria-label="Maintenance">
+              <NavDropdown.Item
+                as={NavLink}
+                onClick={() => setExpanded(false)}
+                to="/maintenance"
+              >
                 {t("navBar.maintenance")}
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4" aria-label="Metal Work">
+              <NavDropdown.Item aria-label="Metal Work">
                 {t("navBar.metalWork")}
               </NavDropdown.Item>
             </NavDropdown>
-
             <NavDropdown title={t("navBar.products")}>
-              <NavDropdown.Item href="#action/3.1" aria-label="consoleCranes">
+              <NavDropdown.Item
+                aria-label="consoleCranes"
+                onClick={() => setExpanded(false)}
+                as={NavLink}
+                to="/consoleCranes"
+              >
                 {t("navBar.consoleCranes")}
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2" aria-label="Gantry cranes">
+              <NavDropdown.Item
+                aria-label="Gantry cranes"
+                as={NavLink}
+                onClick={() => setExpanded(false)}
+                to="/gantryCranes"
+              >
                 {t("navBar.gantryCranes")}
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3" aria-label="Overhead cranes">
-                {t("navBar.overheadCranes")}
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
               <NavDropdown.Item
-                href="#action/3.4"
-                aria-label="mechanicalEngineering"
+                aria-label="Overhead cranes"
+                as={NavLink}
+                onClick={() => setExpanded(false)}
+                to="/overheadCranes"
               >
-                {t("navBar.mechanicalEngineering")}
+                {t("navBar.overheadCranes")}
               </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown title={t("navBar.projects")}>
-              <NavDropdown.Item href="#action/3.1">
-                {t("navBar.action")}
+              <NavDropdown.Item
+                aria-label="Our projects"
+                as={NavLink}
+                onClick={() => setExpanded(false)}
+                to="/ourProjects"
+              >
+                {t("navBar.ourProjects")}
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                {t("navBar.anotherAction")}
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">
-                {t("navBar.something")}
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                {t("navBar.mechanicalEngineering")}
-              </NavDropdown.Item>
+              <NavDropdown.Item>{t("navBar.gallery")}</NavDropdown.Item>
             </NavDropdown>
 
-            <ScrollLink
-              activeClass="active"
-              to="contacts"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={300}
+            <Nav.Link
+              aria-label="Contact page"
+              as={NavLink}
               onClick={() => setExpanded(false)}
+              to="/contact"
             >
-              <Nav.Link>{t("navBar.contacts")}</Nav.Link>
-            </ScrollLink>
+              {t("navBar.contacts")}
+            </Nav.Link>
           </Nav>
 
           <Nav

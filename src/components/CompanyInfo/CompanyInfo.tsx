@@ -16,7 +16,6 @@ const CompanyInfo = () => {
   
   const { t } = useTranslation();
 
-  // Mock data for completed projects and main activities
   
   const yearsInBusinessText = t('companyInfo.yearsInBusiness');
   const completedProjectsText = t('companyInfo.completedProjects');
@@ -48,7 +47,6 @@ const CompanyInfo = () => {
   // Motion
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  // Determine whether to animate along the x-axis or y-axis depending on screen size
   const animateX = windowWidth > 1120;
   const animateY = windowWidth <= 1120;
  

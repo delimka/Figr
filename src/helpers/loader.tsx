@@ -1,13 +1,13 @@
-import Spinner from 'react-bootstrap/Spinner';
+import Spinner from "react-bootstrap/Spinner";
 
-function BasicExample() {
-
-
+function Skeleton() {
   return (
-    <Spinner animation="border" role="status" >
-      <span className="visually-hidden">Loading...</span>
-    </Spinner>
+    <div style={{ minHeight: "100svh", display:"grid", placeItems: "center", backgroundColor:"#F8F9FA"}}>
+      <Spinner animation="border" role="status" style={{color:"#FF7F00"}}>
+        <span className="visually-hidden">Loading...</span>
+      </Spinner>
+    </div>
   );
 }
 
-export default BasicExample;
+export default Skeleton;

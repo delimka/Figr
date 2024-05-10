@@ -1,0 +1,86 @@
+.ProductsContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  gap: 5%;
+}
+.carouselContainer {
+  width: 100%;
+  padding-top: 50px;
+  padding: 0 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-row: 1/2;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  margin-bottom: 1rem;
+  span {
+    font-weight: 600;
+  }
+}
+
+.button {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s, visibility 0.3s;
+  border: none;
+  background: transparent;
+  align-items: center;
+  cursor: pointer;
+  pointer-events: auto;
+  gap: 15px;
+}
+
+.buttonRight {
+  display: flex;
+  flex-direction: row;
+}
+.buttonLeft {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media (max-width: 747px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .space {
+    display: none;
+  }
+
+  .carouselContainer {
+    padding: 0;
+  }
+}
+
+@media (max-width: 444px) {
+}

@@ -21,10 +21,6 @@ function AnimatedImageContainer({ threshold, children, yValue, xValue, className
     threshold: threshold || 0.1,
   });
 
-  console.log("InView:", inView);
-  console.log("Y Value:", yValue);
-  console.log("X Value:", xValue);
-
   return (
     <motion.div 
       ref={ref}

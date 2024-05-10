@@ -3,14 +3,18 @@ import LinesEllipsis from "react-lines-ellipsis";
 import { Element } from "react-scroll";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import image0 from "./../../assets/services/image0.webp";
+import image0 from "./../../assets/pages/production/image3.webp";
 import image1 from "./../../assets/services/image-installation.webp";
 import image2 from "./../../assets/services/image-production.webp";
 import image3 from "./../../assets/services/image-surfacecoating.webp";
+import { useNavigate } from "react-router-dom";
 import "./Services.scss";
 
 const Services = () => {
   const { t } = useTranslation();
+const navigate = useNavigate();
+
+
 
   return (
     <Element name="services" className="services-container">
@@ -18,7 +22,7 @@ const Services = () => {
         <img src={image0} alt="Crane Services Overview" loading="lazy" />
       </div>
 
-      <div className="image-container small">
+      <div className="image-container small" onClick={() => navigate(`/maintenance`)}>
         <img src={image3} alt="Maintenance Service" loading="lazy" />
         <div className="overlay-content prpl">
           <h2>{t("services.maintenance.heading")}</h2>
@@ -38,7 +42,7 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="image-container small">
+      <div className="image-container small"  onClick={() => navigate(`/production`)}>
         <img src={image2} alt="Production Service" loading="lazy" />
         <div className="overlay-content orng">
           <h2>{t("services.production.heading")}</h2>
@@ -58,7 +62,7 @@ const Services = () => {
         </div>
       </div>
 
-      <div className="image-container small">
+      <div className="image-container small"  onClick={() => navigate(`/installation`)}>
         <img src={image1} alt="Installation Service" loading="lazy" />
         <div className="overlay-content prpl">
           <h2>{t("services.installation.heading")}</h2>

@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next'; 
 import Form from 'react-bootstrap/Form';
 import OrangeBtn from "./../OrangeBtn/OrangeBtn";
-import './QuoteForm.scss';
 import icon4 from "./../../assets/info-icons/Vector4.svg";
 import icon5 from "./../../assets/info-icons/Vector5.svg";
 import icon6 from "./../../assets/info-icons/Vector6.svg";
+import './QuoteForm.scss';
+
 
 function QuoteForm() {
   const [validated, setValidated] = useState(false);

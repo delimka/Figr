@@ -1,0 +1,102 @@
+.coverContainer {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.coverImage {
+  width: 100%;
+  min-height: 450px;
+  max-height: 450px;
+  z-index: 20;
+}
+.topicContainer {
+  position: absolute;
+  z-index: 100;
+  top: 30%;
+  color: white;
+  margin-left: 15%;
+}
+.textOverlay {
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  caret-color: transparent;
+  text-align: left;
+}
+.h1 {
+  font-size: 40px;
+}
+.h2 {
+  font-size: 14px;
+  font-weight: 100;
+}
+@media (max-width: 1200.2px) {
+
+  .coverImage {
+    width: 100%;
+    min-height: 300px;
+    max-height: 300px;
+  }
+  .h1 {
+    font-size: 32px;
+  }
+  .h2 {
+    font-size: 12px;
+    font-weight: 100;
+  }
+}
+
+@media (max-width: 991.2px) {
+  .topicContainer {
+    margin-left: 10%;
+  }
+  .coverImage {
+    width: 100%;
+    min-height: 300px;
+    max-height: 300px;
+  }
+  .h1 {
+    font-size: 32px;
+  }
+  .h2 {
+    font-size: 12px;
+    font-weight: 100;
+  }
+}
+
+@media (max-width: 790.2px) {
+  .topicContainer {
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 600px) {
+  .coverImage {
+    width: 100%;
+    min-height: 250px;
+    max-height: 250px;
+  }
+  .h1 {
+    font-size: 27px;
+  }
+  .h2 {
+    font-size: 12px;
+    font-weight: 100;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .coverImage {
+    width: 100%;
+    min-height: 200px;
+    max-height: 200px;
+  }
+  .h1 {
+    font-size: 27px;
+  }
+  .h2 {
+    font-size: 12px;
+    font-weight: 100;
+  }
+}

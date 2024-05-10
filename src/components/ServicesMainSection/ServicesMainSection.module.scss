@@ -1,0 +1,62 @@
+@import "./../../helpers/helpers.scss";
+
+.mainInfo {
+  display: flex;
+  gap: 5%;
+}
+
+.mainParagraph {
+  flex: 2;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.extraInfo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 2% 2% 5% 2%;
+  background-color: $orange;
+  height: 50%;
+  gap: 25px;
+  color: white;
+}
+.extraInfoHeading {
+  font-size: 2rem;
+}
+
+.btn1 {
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 45px;
+  height: 45px;
+  border: none;
+  color: $orange-light;
+  font-size: 20px;
+}
+
+@media (max-width: 991.2px) {
+  .h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 747px) {
+  .mainInfo {
+    flex-direction: column;
+  }
+}
+@media (max-width: 890px) {
+  .extraInfoHeading {
+    font-size: 1.5rem;
+  }
+  .extraInfo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 4% 4% 7% 4%;
+  }
+}

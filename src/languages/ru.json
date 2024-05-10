@@ -12,7 +12,9 @@
     "overheadCranes": "Навесные краны",
     "mechanicalEngineering": "Машиностроение",
     "projects": "Проекты",
-    "contacts": "Контакты"
+    "contacts": "Контакты",
+    "gallery": "Галерея",
+    "ourProjects":"Наши Проекты"
   },
 
   "hero": {

@@ -1,0 +1,79 @@
+@import "./../../helpers/helpers.scss";
+.cardContainer {
+  position: relative;
+  display: flex;
+  align-items: left;
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15%;
+  height: 230px;
+  width: 269.37px;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.4), -5px 5px 12px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  z-index: 10;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 15px;
+    background-color: $purple-light;
+    border-radius: 10px 10px 0 0;
+  }
+}
+.readMoreContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+}
+
+.readMore {
+  color: $orange-light;
+}
+
+.title {
+  font-size: 22px;
+  text-wrap: nowrap;
+}
+z .intro {
+  color: gray;
+}
+
+.cardContainer.active {
+  border: 2px solid rgba(244, 152, 60, 0.6);
+  border-radius: 15px;
+  background-color: rgba(244, 152, 60, 0.02);
+  transition: 0.5s ease-in-out;
+  transform: scale(1.03);
+}
+
+@media (max-width: 500px) {
+  .cardContainer {
+    height: 200px;
+    width: 230px;
+  }
+  .title{
+    font-size: 17px
+  }
+  .readMore{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .cardContainer {
+    height: 180px;
+    width: 200px;
+  }
+  .title{
+    font-size: 17px
+  }
+  .readMore{
+    font-size: 14px;
+  }
+}
+

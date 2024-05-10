@@ -56,7 +56,11 @@ function AboutUs() {
           <Carousel>
             <Carousel.Item>
               <div className="" title="Metallkonstruktsiooni paigaldus">
-                <img src={image1_sm} loading="lazy" alt="Metallkonstruktsiooni paigaldus"  />
+                <img
+                  src={image1_sm}
+                  loading="lazy"
+                  alt="Metallkonstruktsiooni paigaldus"
+                />
               </div>
             </Carousel.Item>
             <Carousel.Item>
@@ -95,7 +99,11 @@ function AboutUs() {
                 className="photo photo-1"
                 title="Metallkonstruktsiooni paigaldus"
               >
-                <img src={image1_xs} loading="lazy" alt="Metallkonstruktsiooni paigaldus" />
+                <img
+                  src={image1_xs}
+                  loading="lazy"
+                  alt="Metallkonstruktsiooni paigaldus"
+                />
               </div>
             </AnimatedImageContainer>
 

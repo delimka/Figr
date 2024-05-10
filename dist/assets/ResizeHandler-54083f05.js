@@ -1,1 +1,0 @@
-import{r as n}from"./index-d84f8024.js";function i({setWindowWidth:e}){return n.useEffect(()=>{const r=()=>{e(window.innerWidth)};return window.addEventListener("resize",r),()=>{window.removeEventListener("resize",r)}},[e]),null}export{i as R};

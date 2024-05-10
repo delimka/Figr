@@ -4,9 +4,9 @@ import "./Projects.scss";
 import AnimatedImageContainer from "../../helpers/hooks/AnimatedImageContainer";
 import ModalImage from "../../helpers/hooks/ModalImage";
 import OrangeBtn from "./../OrangeBtn/OrangeBtn";
-import image1 from "./../../assets/projects/project1.webp";
+import image1 from "./../../assets/pages/production/image2.webp";
 import image2 from "./../../assets/projects/project2.webp";
-import image3 from "./../../assets/projects/project3.webp";
+import image3 from "./../../assets/pages/production/image3.webp";
 import image4 from "./../../assets/projects/project4.webp";
 import image5 from "./../../assets/projects/project5.webp";
 
@@ -88,7 +88,7 @@ function Projects() {
           <div className="project-photo project-photo-5 ">
             <img src={image5} alt="Project 5" loading="lazy" />
           </div>
-          </AnimatedImageContainer>
+        </AnimatedImageContainer>
       </div>
 
       {selectedImage !== null ? (

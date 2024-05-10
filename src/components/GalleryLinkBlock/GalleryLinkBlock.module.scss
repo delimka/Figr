@@ -1,0 +1,51 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: auto;
+  margin: 15% 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 33, 91, 0.9);
+  color: white;
+  text-align: center;
+  gap: 15px;
+  padding: 5px;
+}
+
+@media (max-width: 991px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .imageWrapper:nth-child(2) {
+    grid-column: 1 / -1;
+    max-height: 300px;
+  }
+
+  .imageWrapper:nth-child(2) {
+    order: -1;
+  }
+}

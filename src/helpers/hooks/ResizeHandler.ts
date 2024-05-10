@@ -1,8 +1,5 @@
 import {  useEffect } from "react";
 
-
-
-
 interface ResizeHandlerProps {
   setWindowWidth: React.Dispatch<React.SetStateAction<number>>;
 }
