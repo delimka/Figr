@@ -23,9 +23,8 @@
     h3 {
       color: $orange;
       font-weight: 500;
-      font-size: 14px;     
+      font-size: 14px;
       padding-bottom: 15px;
-
     }
     div {
       padding-bottom: 15px;
@@ -33,6 +32,9 @@
   }
 }
 
+.row {
+  margin-right: 0;
+}
 .quote-form-info {
   height: auto;
   width: min(100% - 50%);
@@ -47,22 +49,18 @@
       width: 100%;
     }
   }
-
- 
 }
-
-@media (max-width: 555px) {
+@media (max-width: 1000px) {
   .quote-request-container {
-    margin-top: 200px;
-
+    justify-content: space-evenly;
     form {
-      div {
-        padding-bottom: 5px;
-      }
+      width: 80%;
+    }
+    .quote-form-info {
+      display: none;
     }
   }
 }
-
 @media (max-width: 780px) {
   .quote-request-container {
     justify-content: stretch;
@@ -76,14 +74,14 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 555px) {
   .quote-request-container {
-    justify-content: space-evenly;
+    margin-top: 200px;
+
     form {
-      width: 80%;
-    }
-    .quote-form-info {
-      display: none;
+      div {
+        padding-bottom: 5px;
+      }
     }
   }
 }

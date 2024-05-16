@@ -119,7 +119,7 @@ const CarouselContainer: React.FC<CarouselContainerProps> = ({ projects }) => {
       <Carousel
         swipeable={true}
         draggable={true}
-        showDots={false}
+        showDots={true}
         ssr={false}
         arrows={false}
         keyBoardControl={true}

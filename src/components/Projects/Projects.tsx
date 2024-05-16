@@ -9,11 +9,14 @@ import image2 from "./../../assets/projects/project2.webp";
 import image3 from "./../../assets/pages/production/image3.webp";
 import image4 from "./../../assets/projects/project4.webp";
 import image5 from "./../../assets/projects/project5.webp";
+import { useNavigate } from "react-router-dom";
+
 
 function Projects() {
   const [showModal, setShowModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const handleImageClick = (index: number) => {
     console.log("handleImageClick called");
@@ -51,7 +54,9 @@ function Projects() {
             <div className="overlay">
               <h3>{t("project.heading")}</h3>
               <p>{t("project.description")}</p>
-              <OrangeBtn>{t("project.buttonText")}&nbsp;&nbsp;→</OrangeBtn>
+              <OrangeBtn onClick={() => {
+              navigate("/ourProjects")
+              }}>{t("project.buttonText")}&nbsp;&nbsp;→</OrangeBtn>
             </div>
             <img src={image2} alt="Project 2" loading="lazy" />
           </div>

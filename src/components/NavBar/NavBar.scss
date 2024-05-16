@@ -8,6 +8,10 @@
   justify-content: space-between;
   align-items: center;
   caret-color: transparent;
+  .logo {
+    all: unset;
+    cursor: pointer;
+  }
 }
 
 #basic-navbar-nav {
@@ -56,7 +60,7 @@
     }
   }
 
-  .logo {
+  .logoImg {
     width: 200px;
     height: 64px;
   }
@@ -92,7 +96,7 @@
     gap: 10px;
   }
 
-  .logo {
+  .logoImg {
     width: 130px;
     height: 40px;
   }
@@ -115,4 +119,9 @@
   color: $orange;
   background: none;
   caret-color: transparent;
+}
+
+.transparent {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }

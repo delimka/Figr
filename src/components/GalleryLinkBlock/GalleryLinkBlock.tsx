@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./GalleryLinkBlock.module.scss";
 import OrangeBtn from "../OrangeBtn/OrangeBtn";
+import { Link } from "react-router-dom";
 
 interface GalleryLinkBlockProps {
   img1: string;
@@ -23,9 +24,11 @@ const GalleryLinkBlock: React.FC<GalleryLinkBlockProps> = ({
         <div className={styles.overlay}>
           <h1>Галерея</h1>
           <span>Фотогалерея наших проектов</span>
-          <OrangeBtn>
-            <span>Смотреть</span>
-          </OrangeBtn>
+          <Link to="/gallery">
+            <OrangeBtn >
+              <span>Смотреть</span>
+            </OrangeBtn>
+          </Link>
         </div>
       </div>
       <div className={styles.imageWrapper}>

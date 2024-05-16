@@ -9,3 +9,22 @@
   max-height: 500px;
   object-fit: cover;
 }
+
+@media (max-width: 747px) {
+  .collageImg {
+    min-height: 300px;
+  }
+}
+
+
+@media (max-width: 479px) {
+  .collageImg {
+    min-height: 270px;
+  }
+}
+
+@media (max-width: 400px) {
+  .collageImg {
+    min-height: 220px;
+  }
+}

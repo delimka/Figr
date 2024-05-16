@@ -4,6 +4,8 @@ import NavBar from "./components/NavBar/NavBar.tsx";
 import Footer from "./components/Footer/Footer.tsx";
 import Loader from "./helpers/loader.tsx";
 import PageWrapper from "./components/PageWrapper/PageWrapper.tsx";
+import { NavBarVisibilityProvider } from "./context/NavBarVisibilityContext.tsx"; // Импортируйте контекст
+
 const Hero = lazy(() => import("./components/Hero/Hero.tsx"));
 const Services = lazy(() => import("./components/Services/Services.tsx"));
 const Projects = lazy(() => import("./components/Projects/Projects.tsx"));
@@ -28,104 +30,111 @@ const OverheadCranes = lazy(
   () => import("./pages/OverheadCranes/OverheadCranes.tsx")
 );
 
-const Contact = lazy(
-  () => import("./pages/Contact/Contact.tsx")
-);
-const OurProjects = lazy(
-  () => import("./pages/OurProjects/OurProjects.tsx")
-);
+const Contact = lazy(() => import("./pages/Contact/Contact.tsx"));
+const OurProjects = lazy(() => import("./pages/OurProjects/OurProjects.tsx"));
+const Gallery = lazy(() => import("./pages/Gallery/Gallery.tsx"));
 import ScrollToTop from "./helpers/hooks/ScrollToTop";
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <ScrollToTop />
-      <NavBar />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Suspense fallback={<Loader />}>
-              <Hero />
-              <CompanyInfo />
-              <AboutUs />
-              <Services />
-              <Projects />
-              <Contacts />
-              <QuoteForm />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/installation"
-          element={
-            <Suspense fallback={<Loader />}>
-              <Installation />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/production"
-          element={
-            <Suspense fallback={<Loader />}>
-              <PageWrapper>
-                <Production />
-              </PageWrapper>
-            </Suspense>
-          }
-        />
-        <Route
-          path="/maintenance"
-          element={
-            <Suspense fallback={<Loader />}>
-              <Maintenance />
-            </Suspense>
-          }
-        />
-       
-        <Route
-          path="/consoleCranes"
-          element={
-            <Suspense fallback={<Loader />}>
-              <ConsoleCranes />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/gantryCranes"
-          element={
-            <Suspense fallback={<Loader />}>
-              <GantryCranes />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/overheadCranes"
-          element={
-            <Suspense fallback={<Loader />}>
-              <OverheadCranes />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <Suspense fallback={<Loader />}>
-              <Contact />
-            </Suspense>
-          }
-        />
+    <NavBarVisibilityProvider>
+      <Router>
+        <ScrollToTop />
+        <NavBar />
+        <Routes>
           <Route
-          path="/ourProjects"
-          element={
-            <Suspense fallback={<Loader />}>
-              <OurProjects />
-            </Suspense>
-          }
-        />
-      </Routes>
-      <Footer />
-    </Router>
+            path="/"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Hero />
+                <CompanyInfo />
+                <AboutUs />
+                <Services />
+                <Projects />
+                <Contacts />
+                <QuoteForm />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/installation"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Installation />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/production"
+            element={
+              <Suspense fallback={<Loader />}>
+                <PageWrapper>
+                  <Production />
+                </PageWrapper>
+              </Suspense>
+            }
+          />
+          <Route
+            path="/maintenance"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Maintenance />
+              </Suspense>
+            }
+          />
+
+          <Route
+            path="/consoleCranes"
+            element={
+              <Suspense fallback={<Loader />}>
+                <ConsoleCranes />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/gantryCranes"
+            element={
+              <Suspense fallback={<Loader />}>
+                <GantryCranes />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/overheadCranes"
+            element={
+              <Suspense fallback={<Loader />}>
+                <OverheadCranes />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Contact />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/ourProjects"
+            element={
+              <Suspense fallback={<Loader />}>
+                <OurProjects />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/gallery"
+            element={
+              <Suspense fallback={<Loader />}>
+                <Gallery />
+              </Suspense>
+            }
+          />
+        </Routes>
+        <Footer />
+      </Router>
+    </NavBarVisibilityProvider>
   );
 };
 

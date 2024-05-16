@@ -15,8 +15,8 @@
   &:before {
     content: "";
     position: absolute;
-    width: 100%;
-    top: -10px;
+    width: 101%;
+    top: -5px;
     left: 50%;
     transform: translateX(-50%);
     height: 15px;
@@ -44,11 +44,18 @@ z .intro {
 }
 
 .cardContainer.active {
-  border: 2px solid rgba(244, 152, 60, 0.6);
+  border: 1px solid rgba(244, 152, 60, 0.6);
   border-radius: 15px;
   background-color: rgba(244, 152, 60, 0.02);
   transition: 0.5s ease-in-out;
   transform: scale(1.03);
+}
+
+@media (max-width: 730px) {
+  .cardContainer {
+    box-shadow: none;
+    border: 1px solid rgba(244, 152, 60, 0.3);
+  }
 }
 
 @media (max-width: 500px) {
@@ -56,10 +63,10 @@ z .intro {
     height: 200px;
     width: 230px;
   }
-  .title{
-    font-size: 17px
+  .title {
+    font-size: 17px;
   }
-  .readMore{
+  .readMore {
     font-size: 14px;
   }
 }
@@ -69,11 +76,10 @@ z .intro {
     height: 180px;
     width: 200px;
   }
-  .title{
-    font-size: 17px
+  .title {
+    font-size: 17px;
   }
-  .readMore{
+  .readMore {
     font-size: 14px;
   }
 }
-

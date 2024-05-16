@@ -9,12 +9,18 @@ import logo from "./../../assets/Logo.webp";
 import ru from "./../../assets/flags/Russia.png";
 import eng from "./../../assets/flags/UK.png";
 import est from "./../../assets/flags/Estonia.png";
+import { useNavigate } from "react-router-dom";
+import { useNavBarVisibility } from "./../../context/NavBarVisibilityContext";
+
 import "./NavBar.scss";
 
 const NavBar = () => {
   const { t, i18n } = useTranslation();
   const [expanded, setExpanded] = useState(false);
   const navRef = useRef<HTMLElement | null>(null);
+  const navigate = useNavigate();
+
+  const { isNavBarVisible } = useNavBarVisibility();
 
   const changeLanguage = (lng: string) => {
     i18n
@@ -45,13 +51,20 @@ const NavBar = () => {
   return (
     <Navbar
       expand="lg"
-      className="bg-body-tertiary"
+      className={`bg-body-tertiary ${isNavBarVisible ? "" : "transparent"}`}
       expanded={expanded}
       onToggle={() => setExpanded(!expanded)}
       ref={navRef}
     >
       <Container id="nav-container-id">
-        <img className="logo" src={logo} alt="Figr logo" />
+        <button
+          className="logo"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          <img className="logoImg" src={logo} alt="Figr logo" />
+        </button>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
         <Navbar.Collapse id="basic-navbar-nav">
@@ -126,7 +139,14 @@ const NavBar = () => {
               >
                 {t("navBar.ourProjects")}
               </NavDropdown.Item>
-              <NavDropdown.Item>{t("navBar.gallery")}</NavDropdown.Item>
+              <NavDropdown.Item
+                aria-label="Our projects"
+                as={NavLink}
+                onClick={() => setExpanded(false)}
+                to="/gallery"
+              >
+                {t("navBar.gallery")}
+              </NavDropdown.Item>
             </NavDropdown>
 
             <Nav.Link

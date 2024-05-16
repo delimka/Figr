@@ -22,7 +22,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "typeRoots": ["node_modules/@types"]
+    "typeRoots": ["node_modules/@types", "./src/types"]
   },
   "include": ["src", ".eslintrc.cjs", "i18n.ts"],
   "references": [{ "path": "./tsconfig.node.json" }],

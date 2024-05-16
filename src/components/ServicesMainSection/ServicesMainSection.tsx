@@ -30,9 +30,8 @@ const ServiceInfo = ({
 
   return (
     <div>
-      <h2>{mainTitle}</h2>
+      <h2 className={styles.mainHeading}>{mainTitle}</h2>
       <div className={styles.mainInfo}>
-        <p className={styles.mainParagraph}>{mainParagraph}</p>
         <div className={styles.extraInfo}>
           <h1 className={styles.extraInfoHeading}>{subHeading}</h1>
           <p>{subParagraph}</p>
@@ -45,6 +44,7 @@ const ServiceInfo = ({
             </button>
           </div>
         </div>
+        <p className={styles.mainParagraph}>{mainParagraph}</p>
       </div>
     </div>
   );

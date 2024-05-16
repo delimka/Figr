@@ -103,7 +103,20 @@ const CarouselContainer: React.FC<CarouselContainerProps> = ({
     },
   };
   const ButtonGroup = ({ next, previous, carouselState }: ButtonGroupProps) => {
-    const { currentSlide } = carouselState;
+    const { currentSlide, totalItems } = carouselState;
+
+    const getVisibleItems = () => {
+      const width = window.innerWidth;
+      if (width >= 1700) return responsiveConfig.superLargeDesktop.items;
+      else if (width >= 1335) return responsiveConfig.desktop.items;
+      else if (width >= 730) return responsiveConfig.tablet.items;
+      else if (width >= 550) return responsiveConfig.wideMobile.items;
+      else return responsiveConfig.mobile.items;
+    };
+
+    const visibleItems = getVisibleItems();
+
+    const isLastSlideVisible = currentSlide + visibleItems >= totalItems;
 
     return (
       <div className={styles.buttonContainer}>
@@ -119,7 +132,11 @@ const CarouselContainer: React.FC<CarouselContainerProps> = ({
             color="#f4983c"
           />
         </button>
-        <button className={styles.button} onClick={next}>
+        <button
+          className={`${styles.button} 
+            ${isLastSlideVisible ? styles.hidden : ""}`}
+          onClick={next}
+        >
           <FontAwesomeIcon
             icon={faArrowCircleRight}
             size={"2x"}
@@ -154,6 +171,7 @@ const CarouselContainer: React.FC<CarouselContainerProps> = ({
         responsive={responsiveConfig}
         containerClass={styles.carouselContainer}
         itemClass={styles.item}
+        sliderClass={styles.slider}
         partialVisible={true}
         //   sliderClass={styles.carouselTrack}
       >

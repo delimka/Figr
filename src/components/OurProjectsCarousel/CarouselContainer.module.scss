@@ -14,8 +14,7 @@
 }
 .carouselContainer {
   width: 100%;
-  padding-top: 50px;
-  padding: 0 5px;
+  padding: 50px 5px;
   position: relative;
   overflow: hidden;
 }
@@ -34,7 +33,7 @@
   align-items: center;
   grid-row: 1/2;
   width: 100%;
-  padding-left: 10px;
+  padding-left: 15px;
   padding-right: 10px;
 
   margin-bottom: 1rem;
@@ -76,9 +75,13 @@
   .space {
     display: none;
   }
+  .buttonContainer {
+    padding-left: 10px;
+  }
 
   .carouselContainer {
-    padding: 0;
+    padding: 0px 0px 30px 0px;
+
   }
 }
 

@@ -30,6 +30,7 @@ import smProject51 from "./../../assets/pages/production/image1.webp";
 import smProject52 from "./../../assets/pages/production/image2.webp";
 import smProject53 from "./../../assets/pages/production/image3.webp";
 import smProject54 from "./../../assets/pages/production/production.webp";
+
 const Services = () => {
   const projects = [
     {
@@ -48,9 +49,9 @@ const Services = () => {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       ],
       socialLinks: [
-        { icon: <FaFacebook />, url: "http://social3.com" },
-        { icon: <FaTwitter />, url: "http://social3.com" },
-        { icon: <FaMailBulk />, url: "http://social3.com" },
+        { icon: <FaFacebook />, url: "" },
+        { icon: <FaTwitter />, url: "" },
+        { icon: <FaMailBulk />, url: "" },
       ],
     },
     {
@@ -69,9 +70,9 @@ const Services = () => {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       ],
       socialLinks: [
-        { icon: <FaFacebook />, url: "http://social3.com" },
-        { icon: <FaTwitter />, url: "http://social3.com" },
-        { icon: <FaMailBulk />, url: "http://social3.com" },
+        { icon: <FaFacebook />, url: "" },
+        { icon: <FaTwitter />, url: "" },
+        { icon: <FaMailBulk />, url: "" },
       ],
     },
     {
@@ -90,9 +91,9 @@ const Services = () => {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       ],
       socialLinks: [
-        { icon: <FaFacebook />, url: "http://social3.com" },
-        { icon: <FaTwitter />, url: "http://social3.com" },
-        { icon: <FaMailBulk />, url: "http://social3.com" },
+        { icon: <FaFacebook />, url: "" },
+        { icon: <FaTwitter />, url: "" },
+        { icon: <FaMailBulk />, url: "" },
       ],
     },
     {
@@ -111,9 +112,9 @@ const Services = () => {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       ],
       socialLinks: [
-        { icon: <FaFacebook />, url: "http://social3.com" },
-        { icon: <FaTwitter />, url: "http://social3.com" },
-        { icon: <FaMailBulk />, url: "http://social3.com" },
+        { icon: <FaFacebook />, url: "" },
+        { icon: <FaTwitter />, url: "" },
+        { icon: <FaMailBulk />, url: "" },
       ],
     },
     {
@@ -132,9 +133,9 @@ const Services = () => {
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
       ],
       socialLinks: [
-        { icon: <FaFacebook />, url: "http://social3.com" },
-        { icon: <FaTwitter />, url: "http://social3.com" },
-        { icon: <FaMailBulk />, url: "http://social3.com" },
+        { icon: <FaFacebook />, url: "" },
+        { icon: <FaTwitter />, url: "" },
+        { icon: <FaMailBulk />, url: "" },
       ],
     },
   ];

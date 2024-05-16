@@ -7,7 +7,7 @@
 .carouselContainer {
   padding: 50px 0;
   position: relative;
-  
+
   .carouselTrack {
     padding-bottom: 30px;
   }
@@ -54,5 +54,26 @@
 @media (max-width: 730px) {
   .buttonContainer {
     display: none;
+  }
+
+  .item {
+    padding-right: 150px;
+  }
+}
+@media (max-width: 650px) {
+  .item {
+    padding-right: 80px;
+  }
+}
+
+@media (max-width: 450px) {
+  .item {
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 390px) {
+  .item {
+    padding-right:0;
   }
 }
